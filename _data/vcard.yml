@@ -1,0 +1,31 @@
+# Vcard configuration file
+##
+### param "bgimage" - Background Image or Background Photo
+### param "photo" - Small circle photo
+### param "name" - Your Name
+### param "typed" - Typed text under Name
+### param "social" - Social Links, icon class name you can find here https://fontawesome.com/icons?d=gallery&s=brands&m=free
+### param "buttons" - Buttons, icon class you can find here https://ionicons.com/v4/
+
+main:
+  bgimage: "assets/img/bg.jpg"
+  photo: ""
+  name: "Mathew Padley"
+  typed:
+    - text: "Software Engineer"
+    - text: "Blogger"
+    - text: "DevOps Engineer"
+  social:
+    - title: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/matpadley"
+    - title: "LinkIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/matpadley/"
+  buttons:
+    - title: "Download CV"
+      icon: ""
+      url: "https://drive.google.com/"
+    - title: "Contact Me"
+      icon: ""
+      url: "mailto:beshleyua@gmail.com"
