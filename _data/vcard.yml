@@ -13,7 +13,6 @@ main:
   name: "Mathew Padley"
   typed:
     - text: "Software Engineer"
-    - text: "Blogger"
     - text: "DevOps Engineer"
   social:
     - title: "GitHub"
@@ -26,6 +25,3 @@ main:
     - title: "Download CV"
       icon: ""
       url: "https://drive.google.com/"
-    - title: "Contact Me"
-      icon: ""
-      url: "mailto:beshleyua@gmail.com"

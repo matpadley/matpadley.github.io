@@ -20,7 +20,7 @@ main:
         - testimonials
   
   #resume card
-  - title: "Resume"
+  - title: "CV"
     icon: "android-list"
     slug: "resume"
     sections:
@@ -28,11 +28,11 @@ main:
         - skills
   
   #works card
-  - title: "works"
-    icon: "paintbrush"
-    slug: "works"
-    sections:
-        - portfolio
+  #- title: "works"
+  #  icon: "paintbrush"
+  #  slug: "works"
+  #  sections:
+  #      - portfolio
   
   #blog card
   - title: "Blog"
