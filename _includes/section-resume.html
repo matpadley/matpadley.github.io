@@ -26,13 +26,19 @@
 					<p>
 						{{ item.text }} 
 					</p>
+						{% for skill in item.skills %}
+						<div class="cvSkill">
+							{{ skill }}
+							{% if skill != item.skills.last %}-{% endif %}
+						</div>
+						{% endfor %}
 				</div>
 				{% endfor %}
 			</div>
 		</div>
 
 		<!-- education -->
-		<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+		<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
 			<div class="resume-title border-line-h">
 				<div class="icon"><i class="ion ion-{{ content.education.icon }}"></i></div>
 				<div class="name">{{ content.education.title }}</div>

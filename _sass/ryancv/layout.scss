@@ -1111,7 +1111,7 @@
 			display: inline-block;
 			font-size: $extra2-small-size;
 			line-height: $extra2-small-size+7;
-			color: $light-color;
+			color: $active-color;
 			font-weight: 500;
 			text-transform: uppercase;
 			@include border-radius(4px);
@@ -1125,6 +1125,19 @@
 				background: $light-color;
 				@include border-radius(9px);
 			}
+		}
+		.cvSkill
+		{
+			margin: 0 0 10px 0;
+			padding: 0;
+			position: relative;
+			display: inline-block;
+			font-size: $extra2-small-size;
+			line-height: $extra2-small-size+7;
+			color: $active-color;
+			font-weight: 500;
+			text-transform: uppercase;
+			@include border-radius(4px);
 		}
 		.name {
 			margin: 0;
@@ -1326,7 +1339,7 @@
 			text-transform: uppercase;
 		}
 	}
-	.date {
+	.date, .cvSkill {
 		padding: 10px 0 0 0;
 		position: absolute;
 		left: 20px;
@@ -3510,7 +3523,7 @@
 
 /* Resume */
 .resume-items .resume-item {
-	padding: 30px 0;
+	padding: 10px 0;
 }
 
 .resume-items .resume-item:after {
@@ -3538,6 +3551,17 @@
 	font-weight: 400;
 	text-transform: none;
 	border: 1px solid #eeeeee;
+}
+
+.resume-items .resume-item .skill {	margin: 0 0 11px 0;
+	padding: 0 5px;
+	font-size: 13px;
+	line-height: 18px;
+	color: #ccc;
+	font-weight: 400;
+	text-transform: none;
+	border: 1px solid #eeeeee;
+	border-color: $active-color;
 }
 
 .resume-items .resume-item .date:before {
