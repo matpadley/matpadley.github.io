@@ -25,6 +25,11 @@ main:
     slug: "resume"
     sections:
         - resume
+
+  - title: "SKILLS"
+    icon: "android-list"
+    slug: "skills"
+    sections:
         - skills
   
   #works card
