@@ -17,6 +17,11 @@
         type: "GitHub"
         link: "https://www.credly.com/badges/9d132f4a-d1dd-4575-b73b-535178882727/public_url"
         h_line: 1
+        descriptions:
+          - Manage user identities and GitHub authentication
+          - Manage access and permissions based on membership
+          - Enable secure software development and ensure compliance
+          - Manage GitHub Actions and GitHub Packages
       - year: "2024"
         title: "Github Advanved Security"
         description: "Bachelor's Degree in Computer Science "

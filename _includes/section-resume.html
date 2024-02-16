@@ -67,17 +67,24 @@
 			</div>
 			<div class="resume-items">
 				{% assign sorted_items = certs.certifications.items | sort: 'year' | reverse %}
-				{% for item in sorted_items %}
-				<div class="resume-item{% if item.h_line == 1 %} border-line-h{% endif %}">
-					<div class="date">{{ item.year }}</div>
-					<div><img src="assets/img/certification/{{ item.image }}" /></div>
-					<div class="name">
-						<i class="ion ion-{{ item.institution }}"></i>
-						{{ item.title }}
+				{% for cert in sorted_items %}
+				<div class="resume-item{% if item.h_line == 1 %} border-line-h{% endif %} active">
+					<div class="row">
+						<div class="col col-d-4 col-t-4 col-m-12">
+							<div class=" centre-image">
+								<img src="assets/img/certification/{{ cert.image }}" />
+							</div>
+						</div>
+						<div class="col col-d-8 col-t-8 col-m-12">
+							<div class="name"><i class="ion ion-{{ cert.institution }}"></i> {{ cert.title }}</div>
+							<div class="company">
+								{% for item in cert.descriptions %}
+								<p>{{ item }}</p>
+								{% endfor %}
+							</div>
+							<div class="date">{{ cert.year }}</div>
+						</div>
 					</div>
-					<p>
-						{{ item.description }}
-					</p>
 				</div>
 				{% endfor %}
 			</div>
