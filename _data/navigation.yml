@@ -14,10 +14,10 @@ main:
     sections:
         - about
         - services
-        - pricing
+        ###- pricing
         - facts
-        - clients
-        - testimonials
+        ###- clients
+        ###- testimonials
   
   #resume card
   - title: "CV"

@@ -1,4 +1,6 @@
 {% assign content = site.data.content['resume'] %}
+{% assign education = site.data.education %}
+{% assign certs = site.data.certifications %}
 
 <!-- Resume -->
 <div class="content resume">
@@ -40,11 +42,11 @@
 		<!-- education -->
 		<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
 			<div class="resume-title border-line-h">
-				<div class="icon"><i class="ion ion-{{ content.education.icon }}"></i></div>
-				<div class="name">{{ content.education.title }}</div>
+				<div class="icon"><i class="ion ion-{{ education.education.icon }}"></i></div>
+				<div class="name">{{ education.education.title }}</div>
 			</div>
 			<div class="resume-items">
-				{% for item in content.education.items %}
+				{% for item in education.education.items %}
 				<div class="resume-item{% if item.h_line == 1 %} border-line-h{% endif %}">
 					<div class="date">{{ item.year }}</div>
 					<div class="name">{{ item.institution }}</div>
@@ -52,6 +54,38 @@
 					<p>
 						{{ item.text }}
 					</p>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+
+		<!-- certifications -->
+		<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+			<div class="resume-title border-line-h">
+				<div class="icon"><i class="ion ion-{{ certs.certifications.icon }}"></i></div>
+				<div class="name">{{ certs.certifications.title }}</div>
+			</div>
+			<div class="resume-items">
+				{% assign sorted_items = certs.certifications.items | sort: 'year' | reverse %}
+				{% for cert in sorted_items %}
+				<div class="resume-item{% if item.h_line == 1 %} border-line-h{% endif %} active">
+					<div class="row">
+						<div class="col col-d-4 col-t-4 col-m-12">
+							<div class=" centre-image">
+								<img width=160 src="assets/img/certification/{{ cert.image }}" />
+							</div>
+						</div>
+						<div class="col col-d-8 col-t-8 col-m-12">
+							<div class="name"><i class="ion ion-{{ cert.institution }}"></i> {{ cert.title }}</div>
+							<div class="company">
+								{% for item in cert.descriptions %}
+								<p>{{ item }}</p>
+								{% endfor %}
+							</div>
+							<div class="date">{{ cert.year }}</div>
+							<div class="date"><a target="_blank" href="{{cert.link}}">Validate</a></div>
+						</div>
+					</div>
 				</div>
 				{% endfor %}
 			</div>

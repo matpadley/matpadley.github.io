@@ -3776,3 +3776,10 @@
 .grid-items {
 	min-height: 1px;
 }
+
+.col .centre-image
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

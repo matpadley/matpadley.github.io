@@ -1,0 +1,62 @@
+# Sections content configuration file
+## 
+### use navigation.yml file to re-order, delete or add section of each card
+### here you can find all content in all pre-build sections
+
+### About [ about ]
+
+  certifications:
+    title: "Certifications"
+    icon: "university"
+    items:
+      - year: "2023"
+        title: "Github Administrator"
+        description: "Passing the GitHub Administration certification exam validates subject matter expertise with the deployment and administration of GitHub Enterprise as well as how to provide support for GitHub users in the enterprise."
+        institution: "social-github"
+        image: "github-administration.png"
+        type: "GitHub"
+        link: "https://www.credly.com/badges/9d132f4a-d1dd-4575-b73b-535178882727/public_url"
+        h_line: 1
+        descriptions:
+          - Manage user identities and GitHub authentication
+          - Manage access and permissions based on membership
+          - Enable secure software development and ensure compliance
+          - Manage GitHub Actions and GitHub Packages
+      - year: "2024"
+        title: "Github Advanved Security"
+        description: "BPassing the GitHub Advanced Security certification exam validates subject matter expertise with applying software supply chain security patterns and practices with GitHub Advanced Security in the enterprise."
+        institution: "social-github"
+        image: "github-advanced-security.png"
+        link: "https://www.credly.com/badges/d8acbec4-42b3-4fc8-a177-54766c151af9/public_url"
+        type: "GitHub"
+        descriptions:
+          - Configure and use secret scanning, dependency management, and code scanning
+          - Use code scanning with CodeQL
+          - Describe GitHub Advanced Security best practices, results, and how to take corrective measures
+          - Configure GitHub Advanced Security tools in GitHub Enterprise
+        h_line: 1
+      - year: "2023"
+        title: "Github Actions"
+        description: "Passing the GitHub Actions certification exam validates subject matter expertise with applying continuous integration/continuous delivery (CI/CD) patterns and practices using GitHub Actions in the enterprise."
+        institution: "social-github"
+        image: "github-actions.png"
+        type: "GitHub"
+        link: "https://www.credly.com/badges/4be33c9d-07b4-4435-80b6-9ba38594446f/public_url"
+        h_line: 1
+        descriptions:
+          - Describe GitHub Actions and how to use them
+          - Configure and use GitHub Actions workflows
+          - Use GitHub Actions with GitHub Packages
+          - Use GitHub Actions with GitHub Advanced Security
+      - year: "2024"
+        title: "Azure Developer"
+        description: "Bachelor's Degree in Computer Science "
+        institution: "social-windows"
+        image: "microsoft-certified-associate-badge.svg"
+        h_line: 1
+        link: https://learn.microsoft.com/api/credentials/share/en-gb/MathewPadley-5004/93CB7025D6DB754?sharingId=1372D83FBA4113B
+        descriptions:
+          - Develop Azure compute solutions
+          - Develop for Azure storage
+          - Implement Azure security
+          - Monitor, troubleshoot, and optimize Azure solutions

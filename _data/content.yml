@@ -75,20 +75,7 @@ pricing:
       name: "10 Countries Visited"
 
 ### Clients [ clients ]
-clients:
-  title: "Clients"
-  items:
-    - url: "https://www.google.com"
-      image: "assets/img/clients/client_1.png"
 
-    - url: "https://www.google.com"
-      image: "assets/img/clients/client_2.png"
-
-    - url: "https://www.google.com"
-      image: "assets/img/clients/client_3.png"
-
-    - url: "https://www.google.com"
-      image: "assets/img/clients/client_4.png"
 
 ### Testimonials [ testimonials ]
 ### testimonials:
@@ -282,29 +269,6 @@ resume:
         text: "Worked for the Space and Defence division."
         active: 0
         h_line: 0
-        
-        
-  education:
-    title: "Education"
-    icon: "university"
-    items:
-      - year: "1997-2000"
-        institution: "University of Hull"
-        city: "Hull"
-        text: "Bachelor's Degree in Computer Science "
-        h_line: 1
-
-    # - year: "2005 - 2006"
-    #   institution: "Programming Course"
-    #   city: "Paris"
-    #   text: "Coursework - Git, WordPress, Javascript, iOS, Android."
-    #   h_line: 1
-
-    # - year: "2004 - 2005"
-    #   institution: "Web Design Course"
-    #   city: "London"
-    #   text: "Converted Photoshop layouts to web pages using HTML, CSS, and JavaScript"
-    #   h_line: 0
 
 ### Skills [ skills ]
 skills:
