@@ -294,6 +294,31 @@ resume:
         text: "Bachelor's Degree in Computer Science "
         h_line: 1
 
+  certifications:
+    title: "Certifications"
+    icon: "university"
+    items:
+      - year: "2023"
+        title: "Github Administrator"
+        description: "Bachelor's Degree in Computer Science "
+        icon: "social-github"
+        h_line: 1
+      - year: "2024"
+        title: "Github Advanved Secutiry"
+        description: "Bachelor's Degree in Computer Science "
+        icon: "social-github"
+        h_line: 1
+      - year: "2023"
+        title: "Github Actions"
+        description: "Bachelor's Degree in Computer Science "
+        icon: "social-github"
+        h_line: 1
+      - year: "2024"
+        title: "Azure Developer"
+        description: "Bachelor's Degree in Computer Science "
+        icon: "social-windows"
+        h_line: 1
+
     # - year: "2005 - 2006"
     #   institution: "Programming Course"
     #   city: "Paris"
