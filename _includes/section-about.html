@@ -1,5 +1,9 @@
 {% assign content = site.data.content['about'] %}
 
+{% assign birth_year = 1979 %}
+{% assign current_year = 'now' | date: "%Y" %}
+{% assign age = current_year | minus: birth_year %}
+
 <!-- About -->
 <div class="content about">
 
@@ -19,7 +23,11 @@
 			<div class="info-list">
 				<ul>
 					{% for item in content.list %}
+					{% if item.label == 'Age' %}
+					<li><strong>{{ item.label }}: </strong> {{ age }}</li>
+					{% else %}
 					<li><strong>{{ item.label }}: </strong> {{ item.value }}</li>
+					{% endif %}
 					{% endfor %}
 				</ul>
 			</div>
