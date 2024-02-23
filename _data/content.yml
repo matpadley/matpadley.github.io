@@ -3,40 +3,8 @@
 ### use navigation.yml file to re-order, delete or add section of each card
 ### here you can find all content in all pre-build sections
 
-### About [ about ]
-about:
-  title: "About Me"
-  text: "
-        <p>
-          <strong>Hello! I’m Mat Padley.</strong><br> Web designer from USA, California. I have rich experience in web site design and building, also I am good at wordpress. I love to talk with you about our unique.
-        </p>
-        "
-  list:
-    - label: "Age"
-      value: "44"
-
-    - label: "Residence"
-      value: "UK"
-
-    - label: "Freelance"
-      value: "Available"
-
-    ###- label: "Address"
-    ###  value: "California, USA"
-
 ### Services [ services ]
-services:
-  title: "My Services"
-  items:
-    - icon: "code"
-      name: "DevOps Development"
-      text: "GitHub and Microsoft Azure DevOps services."
-      h_line: 1
 
-    - icon: "code"
-      name: ".NET Development"
-      text: "Over 20 years of .NET experience I can help you with your projects."
-      h_line: 1
       
 
 ### Pricing [ pricing ]
@@ -106,7 +74,7 @@ resume:
       - year: "2022 - Present"
         role: "DevOps Engineer"
         company: "Insight Investment"
-        text: "Part of a team tasked with migrating the companies existing source control and ci/cd pipeline to GitHub from BitBucket and TeamCity (cloud and on-prem). This involved writing various scripts (PowerShell) to aid in the migration as well as other smaller tooling to get this process finished."
+        text: "<p>Part of a team tasked with migrating the companies existing source control and ci/cd pipeline to GitHub from BitBucket and TeamCity (cloud and on-prem). This involved writing various scripts (PowerShell) to aid in the migration as well as other smaller tooling to get this process finished.</p>"
         active: 1
         h_line: 1
         skills:
@@ -118,7 +86,7 @@ resume:
       - year: "2021 - 2022"
         role: "Senior Software Craftsperson"
         company: "Codurnace"
-        text: "Feature lead for the API team using .net framework and some Blazor. We had to liaise with the customer regarding requirements and also the internal BA sometimes having to explain complex technical reasons for design decisions. In addition I came up with a process to split the entire solution logically into its business components to simplify development deployment in Azure DevOps, but this has not been actioned."
+        text: "<p>Feature lead for the API team using .net framework and some Blazor. We had to liaise with the customer regarding requirements and also the internal BA sometimes having to explain complex technical reasons for design decisions. In addition I came up with a process to split the entire solution logically into its business components to simplify development deployment in Azure DevOps, but this has not been actioned.</p>"
         active: 0
         h_line: 1
         skills:
@@ -129,7 +97,7 @@ resume:
       - year: "2020 - 2021"
         role: "Senior Software Developer"
         company: "BJSS"
-        text: "Front end developer using Vue.JS and AWS lambdas for a housing client. This involved working with the client closely on design elements of the interface and development leads about front end design. All Vue components were written from a TDD perspective using Jest."
+        text: "<p>Front end developer using Vue.JS and AWS lambdas for a housing client. This involved working with the client closely on design elements of the interface and development leads about front end design. All Vue components were written from a TDD perspective using Jest.</p>"
         active: 0
         h_line: 0
         skills:
@@ -139,7 +107,7 @@ resume:
       - year: "2019-2020"
         role: "Senior Software Engineer"
         company: "AirLogic"
-        text: "Development of a form import service using .net core 3.1 and Docker. This was an interim solution for a larger piece of work of re-engineering an existing solution."
+        text: "<p>Development of a form import service using .net core 3.1 and Docker. This was an interim solution for a larger piece of work of re-engineering an existing solution.</p>"
         active: 0
         h_line: 0
         skills:
@@ -149,7 +117,7 @@ resume:
       - year: "2018-2019"
         role: "Senior Software Engineer"
         company: "Infinity Works"
-        text: "The software I wrote at Inventive IT was being used by a client of Infinity Works and they required my skills to aid them migrating the code and platform. This involved the use of AWS, .net core and vue.js."
+        text: "<p>The software I wrote at Inventive IT was being used by a client of Infinity Works and they required my skills to aid them migrating the code and platform. This involved the use of AWS, .net core and vue.js.</p>"
         active: 0
         h_line: 0
         skills:
@@ -161,7 +129,7 @@ resume:
       - year: "2017-2028"
         role: "Architect Team Lead"
         company: "BLM"
-        text: "Enhancing the bespoke case management system was my main role here. This was written using Web API 2 and Typescript (with Angular) utilising a SQL Server database. Developing the workflows (Part 8, Part 18, Part 20, Offers, Payments, Pre-Litigation and Settlements) was quite cumbersome. Both myself and a colleague introduced a num- ber of improvements to the process to streamline this and reduce the dev to test cycle.</br></br>I was also squad lead for another two to three developers having to manage sprint workloads and queries about the work being done. In this process I was responsible for developing the domain models whilst the other squad members wrote the actual workflows."
+        text: "<p>Enhancing the bespoke case management system was my main role here. This was written using Web API 2 and Typescript (with Angular) utilising a SQL Server database. Developing the workflows (Part 8, Part 18, Part 20, Offers, Payments, Pre-Litigation and Settlements) was quite cumbersome. Both myself and a colleague introduced a num- ber of improvements to the process to streamline this and reduce the dev to test cycle.</p><p>I was also squad lead for another two to three developers having to manage sprint workloads and queries about the work being done. In this process I was responsible for developing the domain models whilst the other squad members wrote the actual workflows.</p>"
         active: 0
         h_line: 0
         skills:
@@ -173,7 +141,7 @@ resume:
       - year: "2017-2017"
         role: "Senior Software Developer"
         company: "YourCard"
-        text: "This was a simple role revolving around supporting the existing applications. Involved in this was migration of onsite servers onto AWS. In addition re-factoring of an old codebase and database report writing."
+        text: "<p>This was a simple role revolving around supporting the existing applications. Involved in this was migration of onsite servers onto AWS. In addition re-factoring of an old codebase and database report writing.</p>"
         active: 0
         h_line: 0
         skills:
@@ -183,14 +151,14 @@ resume:
       - year: "2014-2016"
         role: "Senior Software Engineer"
         company: "Vodafone"
-        text: "My initial role was to work as part of a small team to add new features to a SME app that was architected around BackboneJS, CQRS, Event Sourcing, RabbitMQ, RavenDB and SQL Server. This was re-worked into a WebAPI (including OWIN) back-end and Angular front-end. The domain layer was kept fairly simple but, soon grew more complicated to work in.<br/><br/>The AngularJS, introduced by myself, portion of the project was tested using Protractor tests (myself and another developer put this framework in) and Jasmine within a Team City release pipeline."
+        text: "<p>My initial role was to work as part of a small team to add new features to a SME app that was architected around BackboneJS, CQRS, Event Sourcing, RabbitMQ, RavenDB and SQL Server. This was re-worked into a WebAPI (including OWIN) back-end and Angular front-end. The domain layer was kept fairly simple but, soon grew more complicated to work in.</p><p>The AngularJS, introduced by myself, portion of the project was tested using Protractor tests (myself and another developer put this framework in) and Jasmine within a Team City release pipeline."
         active: 0
         h_line: 0
 
       - year: "2013-2014"
         role: "Senior Software Engineer"
         company: "NHS"
-        text: "CMFT required a new patient record system, and there was no third party application that met their requirements. I was then brought in house to develop this with a small team. We designed a system based on an ASP.NET 4 front end, WCF backend and SQL Server database. User interface elements were designed using Kendo UI and jQuery. Later in the project I introduced Angular JS to manage some of the more com- plex screens.<br/><br/>In three months we had developed a system from the ground up that would integrate (using HL7 messaging) with other hospital systems, had a simple form system and ba- sic user authentication. By the time I left the project this had moved onto consultants having the ability to view patient paperwork in the application."
+        text: "<p>CMFT required a new patient record system, and there was no third party application that met their requirements. I was then brought in house to develop this with a small team. We designed a system based on an ASP.NET 4 front end, WCF backend and SQL Server database. User interface elements were designed using Kendo UI and jQuery. Later in the project I introduced Angular JS to manage some of the more com- plex screens.</p><p>In three months we had developed a system from the ground up that would integrate (using HL7 messaging) with other hospital systems, had a simple form system and ba- sic user authentication. By the time I left the project this had moved onto consultants having the ability to view patient paperwork in the application.</p>"
         active: 0
         h_line: 0
         skills:
@@ -204,7 +172,7 @@ resume:
       - year: "2013-2013"
         role: "Senior Software Engineer"
         company: "Go Outdoors"
-        text: "Part of the business relied heavily on a very over-worked Excel spreadsheet. On my arrival I was tasked with making this simpler to use. All numeric work was originally done using formulas. This was replaced with a COM object using the Microsoft Office Interop libraries. Validation was replaced by using FluentValidation."
+        text: "<p>Part of the business relied heavily on a very over-worked Excel spreadsheet. On my arrival I was tasked with making this simpler to use. All numeric work was originally done using formulas. This was replaced with a COM object using the Microsoft Office Interop libraries. Validation was replaced by using FluentValidation.</p>"
         active: 0
         h_line: 0
         skills:
@@ -217,7 +185,7 @@ resume:
       - year: "2013-2013"
         role: "Senior Software Engineer"
         company: "We Buy Any Car"
-        text: "We Buy Any Car required a system whereby dealers could view and bid (via online auctions) for vehicles from multiple suppliers (Manheim, BCA etc).<br/><br>Originally data was held in an Access database that I migrated this into SQL Server over which sat an ASP.NET WCF layer over this using Dapper for the ORM. A MVC4 front end dealt with user authentication being dealt with using ASP.NET membership providers."
+        text: "<p>We Buy Any Car required a system whereby dealers could view and bid (via online auctions) for vehicles from multiple suppliers (Manheim, BCA etc).</p><p>Originally data was held in an Access database that I migrated this into SQL Server over which sat an ASP.NET WCF layer over this using Dapper for the ORM. A MVC4 front end dealt with user authentication being dealt with using ASP.NET membership providers.</p>"
         active: 0
         h_line: 0
         skills:
@@ -226,14 +194,14 @@ resume:
       - year: "2009-2013"
         role: "Senior Software Engineer"
         company: "Inventive IT"
-        text: "Lead developer for Umbraco CMS development (current sites include Signature and Olympic Holidays). This has involved the basics of Umbraco document management to writing custom modules to import content from existing systems and complex macros.<br/><br/>Heavy involved in designing and implementing the company’s flagship product (Altitude) to manage car park inventory at airports (currently is manages airport inventory at Liverpool Airport). I designed the database (tables, views, stored procedures and functions) and co-wrote both the management system and the customer facing site in ASP.NET web forms and MVC2.<br/><br/>Re-wrote the data layer for a pricing management system, as the previous implementation was far too slow, using SSAS (currently being used by Thomas Cook North America).<br/><br/>Co-developed a hotel repricing application using TDD (MSTest) and MVC3. jQuery was heavily used in this project.<br/><br/>Developed a Data Warehouse for Peel Airport group to enable visibility of car park volumes and passenger numbers. This used SSIS, SSRS and an ASP.NET web form front end.<br/><br/>Developed a new ETL processing engine for the company to manage data warehouse loading. This was written using C# and SQL Server 2008.<br/><br/>Developed prototype hotel booking system for iPhone to integrate with Laterooms bed bank."
+        text: "<p>Lead developer for Umbraco CMS development (current sites include Signature and Olympic Holidays). This has involved the basics of Umbraco document management to writing custom modules to import content from existing systems and complex macros.</p><p>Heavy involved in designing and implementing the company’s flagship product (Altitude) to manage car park inventory at airports (currently is manages airport inventory at Liverpool Airport). I designed the database (tables, views, stored procedures and functions) and co-wrote both the management system and the customer facing site in ASP.NET web forms and MVC2.</p><p>Re-wrote the data layer for a pricing management system, as the previous implementation was far too slow, using SSAS (currently being used by Thomas Cook North America).</p><p>Co-developed a hotel repricing application using TDD (MSTest) and MVC3. jQuery was heavily used in this project.</p><p>Developed a Data Warehouse for Peel Airport group to enable visibility of car park volumes and passenger numbers. This used SSIS, SSRS and an ASP.NET web form front end.</p><p>Developed a new ETL processing engine for the company to manage data warehouse loading. This was written using C# and SQL Server 2008.</p><p>Developed prototype hotel booking system for iPhone to integrate with Laterooms bed bank.</p>"
         active: 0
         h_line: 0
 
       - year: "2006-2008"
         role: "Senior Software Engineer"
         company: "Champion Accountants"
-        text: "Developed the following applications:<br/><br/>Intranet - this was the largest project I undertook at Champion. It replaced paper based systems for holiday, sick forms, training and study leave. In addition team members could upload documents and write articles onto the Intranet.<br/><br/>Helpdesk - this replaced the email based system and allowed for prioritisation of calls, and assignment to various members of the team.<br/><br/>Sever Management - allowed the IT manager to see at a glance the status of all servers. Each server reported its status periodically so problems could be spotted before they became a major problem."
+        text: "<p>Developed the following applications:</p><p>Intranet - this was the largest project I undertook at Champion. It replaced paper based systems for holiday, sick forms, training and study leave. In addition team members could upload documents and write articles onto the Intranet.</p><p>Helpdesk - this replaced the email based system and allowed for prioritisation of calls, and assignment to various members of the team.</p><p>Sever Management - allowed the IT manager to see at a glance the status of all servers. Each server reported its status periodically so problems could be spotted before they became a major problem.</p>"
         active: 0
         h_line: 0
         skills:
@@ -246,7 +214,7 @@ resume:
       - year: "2004-2006"
         role: "Customised Developer"
         company: "Checkfree"
-        text: "Developed internal intranet system."
+        text: "Developed internal intranet system.</p>"
         active: 0
         h_line: 0
         skills:
@@ -256,7 +224,7 @@ resume:
       - year: "2001-2004"
         role: "Software Developer"
         company: "Smart Media"
-        text: "Development of various modules for the company’s flagship product. This included LDAP user integration (Java), forum development (ASP) and a fax server (Visual Basic). <br/><br/>DBA involving both SQL Server (7.0 and 2000) and Oracle (9i), this included both on and off site administration at varying customers throughout the UK in a client facing role operating solely from the office. Development of daily backup procedures using T-SQL that re-built the database on a Disaster Recovery server<br/><br/>Built, installed and DBA of an Oracle 9i database from the hardware stage through to installation on customer site.<br/><br/>Implementation of Extranet and Intranet servers to varying company sizes; this has led to extensive customer contact. This also included a degree of locking down exposed servers using known techniques and NSA guidelines."
+        text: "<p>Development of various modules for the company’s flagship product. This included LDAP user integration (Java), forum development (ASP) and a fax server (Visual Basic). </p><p>DBA involving both SQL Server (7.0 and 2000) and Oracle (9i), this included both on and off site administration at varying customers throughout the UK in a client facing role operating solely from the office. Development of daily backup procedures using T-SQL that re-built the database on a Disaster Recovery server</p><p>Built, installed and DBA of an Oracle 9i database from the hardware stage through to installation on customer site.</p><p>Implementation of Extranet and Intranet servers to varying company sizes; this has led to extensive customer contact. This also included a degree of locking down exposed servers using known techniques and NSA guidelines.</p>"
         active: 0
         h_line: 0
         skills:
@@ -266,7 +234,7 @@ resume:
       - year: "2000-2001"
         role: "I.T. Consultant"
         company: "LogicaCMG"
-        text: "Worked for the Space and Defence division."
+        text: "<p>Worked for the Space and Defence division.</p>"
         active: 0
         h_line: 0
 
@@ -383,7 +351,7 @@ contacts_info:
       value: "Manchester, UK"
 
     - label: "Email"
-      value: "mrpadley@icloud.com"
+      value: "mat.padley@hewley.co.uk"
 
     - label: "Freelance"
       value: "Available"
