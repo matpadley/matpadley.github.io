@@ -1,4 +1,4 @@
-{% assign content = site.data.content['about'] %}
+{% assign content = site.data.about %}
 
 {% assign birth_year = 1979 %}
 {% assign current_year = 'now' | date: "%Y" %}
@@ -14,12 +14,12 @@
 
 	<!-- content -->
 	<div class="row">
-		<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+		<div class="col col-d-8 col-t-8 col-m-12 border-line-v">
 			<div class="text-box">
 				{{ content.text }}
 			</div>
 		</div>
-		<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+		<div class="col col-d-4 col-t-4 col-m-12 border-line-v">
 			<div class="info-list">
 				<ul>
 					{% for item in content.list %}

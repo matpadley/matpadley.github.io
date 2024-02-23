@@ -26,6 +26,12 @@ main:
     sections:
         - resume
 
+  - title: "Certs"
+    icon: "android-list"
+    slug: "certications"
+    sections:
+        - certifications
+
   - title: "SKILLS"
     icon: "android-list"
     slug: "skills"

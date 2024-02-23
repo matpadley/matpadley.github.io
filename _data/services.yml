@@ -1,0 +1,12 @@
+
+  title: "My Services"
+  items:
+    - icon: "code"
+      name: "DevOps Development"
+      text: "GitHub and Microsoft Azure DevOps services."
+      h_line: 1
+
+    - icon: "code"
+      name: ".NET Development"
+      text: "Over 20 years of .NET experience I can help you with your projects."
+      h_line: 1

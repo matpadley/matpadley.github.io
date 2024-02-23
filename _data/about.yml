@@ -1,0 +1,16 @@
+title: "About Me"
+text: "<p>
+          <strong>Hello I'm Mat Padley</strong>, a seasoned professional residing near Manchester, UK, with over two decades of experience in diverse industries including telecoms, finance, space and defense, and health.</p>
+<p>Beyond excelling in various sectors, I am deeply committed to nurturing the next generation of talent, serving as a mentor to individuals new to the industry. With a passion for guiding and empowering others, I leverage my extensive experience to provide invaluable mentorship and support.</p>
+<p>Throughout my career, I've demonstrated a commitment to delivering exceptional results, leveraging my diverse skill set to navigate the complexities of each industry. Explore my portfolio to discover how my breadth of experience can elevate your next project.</p>
+        </p>
+        "
+list:
+  - label: "Age"
+    value: "44"
+
+  - label: "Residence"
+    value: "UK"
+
+  - label: "Freelance"
+    value: "Available"
