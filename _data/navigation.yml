@@ -26,6 +26,12 @@ main:
     sections:
         - resume
 
+  - title: "Projects"
+    icon: "android-list"
+    slug: "projects"
+    sections:
+        - projects
+
   - title: "Certs"
     icon: "android-drafts"
     slug: "certications"

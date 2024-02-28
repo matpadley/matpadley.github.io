@@ -42,11 +42,11 @@
 		<!-- education -->
 		<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
 			<div class="resume-title border-line-h">
-				<div class="icon"><i class="ion ion-{{ education.education.icon }}"></i></div>
-				<div class="name">{{ education.education.title }}</div>
+				<div class="icon"><i class="ion ion-{{ education.icon }}"></i></div>
+				<div class="name">{{ education.title }}</div>
 			</div>
 			<div class="resume-items">
-				{% for item in education.education.items %}
+				{% for item in education.items %}
 				<div class="resume-item{% if item.h_line == 1 %} border-line-h{% endif %}">
 					<div class="date">{{ item.year }}</div>
 					<div class="name">{{ item.institution }}</div>

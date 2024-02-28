@@ -1,0 +1,7 @@
+    title: "Projects"
+    icon: "university"
+    items:
+      - title: Enigma Machine
+        description: Implementation of the Enigma Machines from World War II in .net core
+      - title: Bombe Decryptor
+        description: Implementation of the Blethcley Park Bombe computer from World War II in .net core

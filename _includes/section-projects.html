@@ -1,0 +1,38 @@
+{% assign projects = site.data.projects %}
+
+<!-- Resume -->
+<div class="content resume">
+
+	{{ if projects.title != '' }}
+	<!-- title -->
+	<div class="title">{{ projects.title }}</div>
+	{{ endif }}
+
+	<!-- content -->
+	<div class="row">
+
+		<!-- experience -->
+		<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+			
+
+			<div class="resume-items">
+				{% for item in projects.items %}
+				<div class="resume-item{% if item.h_line == 1 %} border-line-h{% endif %}{% if item.active == 1 %} active{% endif %}">
+
+					<div class="resume-title border-line-h">
+						<div class="name">{{ item.title }}</div>
+					</div>
+
+					<p>
+						{{ item.text }} 
+					</p>
+					
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+
+		<div class="clear"></div>
+	</div>
+
+</div>
