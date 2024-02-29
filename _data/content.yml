@@ -238,11 +238,6 @@ resume:
         active: 0
         h_line: 0
 
-### Skills [ skills ]
-skills:
-   title: "My Skills"
-   columns:
-
 ### Portfolio [ portfolio ]
 portfolio:
   title: "Recent Works"
