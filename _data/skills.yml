@@ -1,0 +1,74 @@
+title: "Skills"
+items:
+
+# frameworks
+- name: Angular
+  weight: 2
+  type: framework
+- name: React
+  weight: 2
+  type: framework
+- name: Vue
+  weight: 3
+  type: framework
+- name: AngularJS
+  weight: 2
+  type: framework
+- name: .NET framework
+  weight: 5
+  type: framework
+- name: .NET Core
+  weight: 5
+  type: framework
+
+# tools
+- name: Git
+  weight: 4
+  type: tool
+- name: Mercurial
+  weight: 1
+  type: tool
+- name: Subversion
+  weight: 1
+  type: tool
+- name: GitHub
+  weight: 5
+  type: tool
+- name: GitHub Enterprise
+  weight: 5
+  type: tool
+- name: Azure Devops
+  weight: 2
+  type: tool
+- name: Azure
+  weight: 3
+  type: tool
+- name: AWS
+  weight: 1
+  type: tool
+- name: Docker
+  weight: 3
+  type: tool
+- name: Kubernetes
+  weight: 1
+  type: tool
+
+# languages
+- name: C#
+  weight: 5
+  type: language
+- name: JavaScript
+  weight: 3
+  type: language
+- name: TypeScript
+  weight: 4
+  type: language
+- name: T-SQL
+  weight: 4
+  type: language
+- name: Powershell
+  weight: 3
+  type: language
+- name: bash
+  weight: 3
+  type: language

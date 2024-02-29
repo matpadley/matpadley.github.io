@@ -1,70 +1,22 @@
-{% assign content = site.data.content['skills'] %}
+{% assign skills = site.data.skills  %}
 
 <!-- Skills -->
 <div class="content skills">
 
-	{{ if content.title != '' }}
+	{{ if skills.title != '' }}
 	<!-- title -->
-	<div class="title">{{ content.title }}</div>
+	<div class="title">{{ skills.title }}</div>
 	{{ endif }}
 
-	<!-- content -->
-	<div class="row">
-		{% for column in content.columns %}
-		<!-- skill item -->
-		<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
-			<div class="skills-list{% if column.type %} {{ column.type }}{% endif %}">
-				<div class="skill-title border-line-h">
-					<div class="icon"><i class="ion ion-{{ column.icon }}"></i></div>
-					<div class="name">{{ column.title }}</div>
-				</div>
-				<ul>
-					{% if column.type == 'default' %}
-					{% for item in column.items %}
-					<li class="border-line-h"> 
-						<div class="name">{{ item.label }}</div>
-						<div class="progress">
-							<div class="percentage" style="width:{{ item.value  }}%;"></div>
-						</div>
-					</li>
-					{% endfor %}
-					{% endif %}
+	{% assign n = skills.items | size %}
+	{% assign random_skills = skills.items | sample: n %}
 
-					{% if column.type == 'dotted' %}
-					{% for item in column.items %}
-					<li class="border-line-h"> 
-						<div class="name">{{ item.label }}</div>
-						<div class="progress">
-							<div class="percentage" style="width:{{ item.value  }}%;"></div>
-						</div>
-					</li>
-					{% endfor %}
-					{% endif %}
-
-					{% if column.type == 'circles' %}
-					{% for item in column.items %}
-					<li>
-						<div class="name">{{ item.label }}</div>
-						<div class="progress p{{ item.value }}">
-							<span>{{ item.value  }}%</span>
-						</div>
-					</li>
-					{% endfor %}
-					{% endif %}
-
-					{% if column.type == 'list' %}
-					{% for item in column.items %}
-					<li> 
-						<div class="name">{{ item.label }}</div>
-					</li>
-					{% endfor %}
-					{% endif %}
-				</ul>
-			</div>
+	<div id="skills">
+		{% for skill in random_skills %}
+		<div skill-type="{{skill.type}}" skill-weight="{{skill.weight}}" data-aos="zoom-in">
+		  {{skill.name}}
 		</div>
-		{% endfor %}
-		
-		<div class="clear"></div>
+	  {% endfor %}
 	</div>
-	
+
 </div>
