@@ -26,44 +26,6 @@ pricing:
           new: 0
 
 
-### Facts [ facts ]
-### facts:
-###   title: "Fun Fact"
-###   items:
-###     - icon: "disc"
-###       name: "80 Albumes Listened"
-
-###     - icon: "trophy"
-###       name: "15 Awards Won"
-
-###     - icon: "coffee"
-###        name: "1 000 Cups of coffee"
-
-###     - icon: "flag"
-      name: "10 Countries Visited"
-
-### Clients [ clients ]
-
-
-### Testimonials [ testimonials ]
-### testimonials:
-###   title: "Testimonials"
-###   items:
-###     - image: "assets/img/man1.jpg"
-    #   name: "Helen Floyd"
-    #   subname: "Art Director"
-    #   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-
-    # - image: "assets/img/man1.jpg"
-    #   name: "Robert Chase"
-    #   subname: "CEO"
-    #   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-
-    # - image: "assets/img/man1.jpg"
-    #   name: "Helen Floyd"
-    #   subname: "Art Director"
-    #   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-
 ### Resume [ resume ]
 resume:
   title: "Curriculum Vitae"
@@ -238,29 +200,6 @@ resume:
         active: 0
         h_line: 0
 
-### Portfolio [ portfolio ]
-portfolio:
-  title: "Recent Works"
-  filters:
-    - name: "All"
-      slug: "grid-item"
-      active: 1
-
-    - name: "Photo"
-      slug: "photo"
-      active: 0
-
-    - name: "Video"
-      slug: "video"
-      active: 0
-
-    - name: "Music"
-      slug: "music"
-      active: 0
-
-    - name: "Design"
-      slug: "design"
-      active: 0
 
 ### Blog [ blog ]
 blog:

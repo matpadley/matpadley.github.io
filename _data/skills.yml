@@ -1,14 +1,40 @@
 title: "Skills"
 items:
-
 # frameworks
+- name: NUnit
+  weight: 4
+  type: framework
+- name: NSubstitue
+  weight: 4
+  type: framework
+- name: Jest
+  weight: 2
+  type: framework
+- name: Entity Framework
+  weight: 3
+  type: framework 
 - name: Angular
   weight: 2
+  type: framework
+- name: Umbraco
+  weight: 1
+  type: framework
+- name: Thymeleaf
+  weight: 1
+  type: framework
+- name: ASP.NET
+  weight: 4
+  type: framework
+- name: Web API
+  weight: 4
+  type: framework
+- name: Spring
+  weight: 1
   type: framework
 - name: React
   weight: 2
   type: framework
-- name: Vue
+- name: Vue.JS
   weight: 3
   type: framework
 - name: AngularJS
