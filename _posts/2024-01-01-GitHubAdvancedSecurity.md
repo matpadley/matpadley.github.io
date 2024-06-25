@@ -18,7 +18,6 @@ GitHub Advanced Security is a facility within GitHub that will provide the follo
 * Code Security Review<
 * Secret Scanning
     
-
 This post is not designed to be a deep dive into the features, but a primer.
 
 It is work noting that not all of the features are available in all of the repository tiers as GitHub Advanced Security is a paid service for all repositories except those that are public.
