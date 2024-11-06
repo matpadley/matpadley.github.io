@@ -52,6 +52,23 @@ items:
       - Use GitHub Actions with GitHub Packages
       - Use GitHub Actions with GitHub Advanced Security
   - year: "2024"
+    title: "Github Copilot"
+    description: "Passing the GitHub Copilot certification exam validates your proficiency in utilizing the AI-driven code completion tool across various programming languages. It certifies your ability to optimize software development workflows effectively. This exam places a strong emphasis on understanding GitHub Copilot plans and features, the AI tool's data utilization, developer use cases, and the fundamentals of privacy and context exclusions."
+    institution_label: "social-github"
+    institution: "GitHub"
+    image: "github-copilot.png"
+    type: "GitHub"
+    link: "https://www.credly.com/badges/81a5612f-d72e-4494-8e06-452b92f29e3f/public_url"
+    h_line: 1
+    descriptions:
+      - Responsible AI
+      - GitHub Copilot plans and features
+      - How GitHub Copilot works and handles data
+      - Prompt Crafting and Prompt Engineering
+      - Developer use cases for AI
+      - Testing with GitHub Copilot
+      - Privacy fundamentals and content exclusions
+  - year: "2024"
     title: "Azure Developer Associate"
     description: "Bachelor's Degree in Computer Science"
     institution_label: "social-windows"
