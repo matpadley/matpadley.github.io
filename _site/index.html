@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="Mat Padley" />
 <script type="application/ld+json">
-{"name":"Mat Padley","author":{"@type":"Person","name":"MatPadley"},"url":"http://localhost:4000/","description":"Mat Padley Workspace","@type":"WebSite","headline":"Mat Padley","@context":"https://schema.org"}</script>
+{"name":"Mat Padley","headline":"Mat Padley","url":"http://localhost:4000/","description":"Mat Padley Workspace","@type":"WebSite","author":{"@type":"Person","name":"MatPadley"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <!-- Load Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -375,30 +375,37 @@
 <!-- Resume -->
 <div class="content resume">
 
-	
-	<!-- title -->
-	<div class="title">Curriculum Vitae</div>
-	
-
 	<!-- content -->
 	<div class="row">
 
 		<!-- experience -->
 		<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-			
+
+
 			<div class="resume-title border-line-h">
 				<div class="icon"><i class="ion ion-briefcase"></i></div>
-				<div class="name">Experience</div>
+				<div class="name">Curriculum Vitae</div>
 			</div>
 			<div class="resume-items">
 				
 				<div class="resume-item border-line-h active">
-					<div class="date">2022 - Present</div>
+					<div class="date">2022 - 2024</div>
 					<div class="name">DevOps Engineer</div>
 					<div class="company">Insight Investment</div>
-					<p>
-						<p>Part of a team tasked with migrating the companies existing source control and ci/cd pipeline to GitHub from BitBucket and TeamCity (cloud and on-prem). This involved writing various scripts (PowerShell) to aid in the migration as well as other smaller tooling to get this process finished.</p> 
-					</p>
+						<ul>
+						
+							<li>Investigate and replace existing CI/CD solution with a new one, in this case GitHub</li>
+						
+							<li>Migrated over 2,500 git repositories in BitBucket and deployment of GitHub Advanced Security across these</li>
+						
+							<li>The company needed to make the developer experience better and also the license cost of the GitHub solution was more favourable</li>
+						
+						</ul>
+						
+						<p>
+							<p>Part of a team tasked with migrating the companies existing source control and ci/cd pipeline to GitHub from BitBucket and TeamCity (cloud and on-prem). This involved writing various scripts (PowerShell) to aid in the migration as well as other smaller tooling to get this process finished.</p> 
+						</p>
+						
 						
 						<div class="cvSkill">
 							.NET Core
@@ -426,9 +433,20 @@
 					<div class="date">2021 - 2022</div>
 					<div class="name">Senior Software Craftsperson</div>
 					<div class="company">Codurnace</div>
-					<p>
-						<p>Feature lead for the API team using .net framework and some Blazor. We had to liaise with the customer regarding requirements and also the internal BA sometimes having to explain complex technical reasons for design decisions. In addition I came up with a process to split the entire solution logically into its business components to simplify development deployment in Azure DevOps, but this has not been actioned.</p> 
-					</p>
+						<ul>
+						
+							<li>Adding new functionality to an end clients medical delivery system</li>
+						
+							<li>A lot of code analysis to understand the brownfield software structure and working within this to add new code that was easily maintainable</li>
+						
+							<li>The client did not have the capacity to complete the work they needed to do</li>
+						
+						</ul>
+						
+						<p>
+							<p>Feature lead for the API team using .net framework and some Blazor. We had to liaise with the customer regarding requirements and also the internal BA sometimes having to explain complex technical reasons for design decisions. In addition I came up with a process to split the entire solution logically into its business components to simplify development deployment in Azure DevOps, but this has not been actioned.</p> 
+						</p>
+						
 						
 						<div class="cvSkill">
 							C#
@@ -451,9 +469,20 @@
 					<div class="date">2020 - 2021</div>
 					<div class="name">Senior Software Developer</div>
 					<div class="company">BJSS</div>
-					<p>
-						<p>Front end developer using Vue.JS and AWS lambdas for a housing client. This involved working with the client closely on design elements of the interface and development leads about front end design. All Vue components were written from a TDD perspective using Jest.</p> 
-					</p>
+						<ul>
+						
+							<li>Development of a new portal to for social housing</li>
+						
+							<li>Close interation with the end client to work finese the front end as well as integrating AWS single sign-on</li>
+						
+							<li>The end client needed a new portal to manage their housing as it was all done manually</li>
+						
+						</ul>
+						
+						<p>
+							<p>Front end developer using Vue.JS and AWS lambdas for a housing client. This involved working with the client closely on design elements of the interface and development leads about front end design. All Vue components were written from a TDD perspective using Jest.</p> 
+						</p>
+						
 						
 						<div class="cvSkill">
 							C#
@@ -471,17 +500,33 @@
 					<div class="date">2019-2020</div>
 					<div class="name">Senior Software Engineer</div>
 					<div class="company">AirLogic</div>
-					<p>
-						<p>Development of a form import service using .net core 3.1 and Docker. This was an interim solution for a larger piece of work of re-engineering an existing solution.</p> 
-					</p>
+						<ul>
+						
+							<li>Wrote integration between third party questionaire data supplier into the existing NHS patient record system</li>
+						
+							<li>Import of data overnight into a staging area, before creating new custom form elements with the new patient record information</li>
+						
+							<li>The patient's current medical state would either result in them being asked to come into the hospital or not</li>
+						
+						</ul>
+						
+						<p>
+							<p>Development of a form import service using .net core 3.1 and Docker. This was an interim solution for a larger piece of work of re-engineering an existing solution.</p> 
+						</p>
+						
 						
 						<div class="cvSkill">
-							Java
+							.net core
 							-
 						</div>
 						
 						<div class="cvSkill">
-							Thymeleaf
+							Docker
+							-
+						</div>
+						
+						<div class="cvSkill">
+							Rancher
 							
 						</div>
 						
@@ -491,9 +536,20 @@
 					<div class="date">2018-2019</div>
 					<div class="name">Senior Software Engineer</div>
 					<div class="company">Infinity Works</div>
-					<p>
-						<p>The software I wrote at Inventive IT was being used by a client of Infinity Works and they required my skills to aid them migrating the code and platform. This involved the use of AWS, .net core and vue.js.</p> 
-					</p>
+						<ul>
+						
+							<li>Worked on re-development of their car parking software</li>
+						
+							<li>aking the 10 year old system, understanding what it currently did and re-writing it a simpler manner</li>
+						
+							<li>I worked on the original product so had existing knowledge of how it was put together</li>
+						
+						</ul>
+						
+						<p>
+							<p>The software I wrote at Inventive IT was being used by a client of Infinity Works and they required my skills to aid them migrating the code and platform. This involved the use of AWS, .net core and vue.js.</p> 
+						</p>
+						
 						
 						<div class="cvSkill">
 							.NET Core
@@ -521,9 +577,20 @@
 					<div class="date">2017-2028</div>
 					<div class="name">Architect Team Lead</div>
 					<div class="company">BLM</div>
-					<p>
-						<p>Enhancing the bespoke case management system was my main role here. This was written using Web API 2 and Typescript (with Angular) utilising a SQL Server database. Developing the workflows (Part 8, Part 18, Part 20, Offers, Payments, Pre-Litigation and Settlements) was quite cumbersome. Both myself and a colleague introduced a num- ber of improvements to the process to streamline this and reduce the dev to test cycle.</p><p>I was also squad lead for another two to three developers having to manage sprint workloads and queries about the work being done. In this process I was responsible for developing the domain models whilst the other squad members wrote the actual workflows.</p> 
-					</p>
+						<ul>
+						
+							<li>Added features and process to existing legal workflow system</li>
+						
+							<li>Wrote new Visual Sudio and Visual Studio Code templates to automate portions of the workflow create process</li>
+						
+							<li>The test team were creating bugs that could have been mitigated if more attention was paid to the code</li>
+						
+						</ul>
+						
+						<p>
+							<p>Enhancing the bespoke case management system was my main role here. This was written using Web API 2 and Typescript (with Angular) utilising a SQL Server database. Developing the workflows (Part 8, Part 18, Part 20, Offers, Payments, Pre-Litigation and Settlements) was quite cumbersome. Both myself and a colleague introduced a num- ber of improvements to the process to streamline this and reduce the dev to test cycle.</p><p>I was also squad lead for another two to three developers having to manage sprint workloads and queries about the work being done. In this process I was responsible for developing the domain models whilst the other squad members wrote the actual workflows.</p> 
+						</p>
+						
 						
 						<div class="cvSkill">
 							Web API
@@ -551,9 +618,20 @@
 					<div class="date">2017-2017</div>
 					<div class="name">Senior Software Developer</div>
 					<div class="company">YourCard</div>
-					<p>
-						<p>This was a simple role revolving around supporting the existing applications. Involved in this was migration of onsite servers onto AWS. In addition re-factoring of an old codebase and database report writing.</p> 
-					</p>
+						<ul>
+						
+							<li>Migrated on-prem virtual machines to AWS</li>
+						
+							<li>Using Amazon tooling to move multi Gigabyte VMS to AWS</li>
+						
+							<li>Allowed the team to concentrate on the features (which we high transaction volume) instead of worrying about hardware</li>
+						
+						</ul>
+						
+						<p>
+							<p>This was a simple role revolving around supporting the existing applications. Involved in this was migration of onsite servers onto AWS. In addition re-factoring of an old codebase and database report writing.</p> 
+						</p>
+						
 						
 						<div class="cvSkill">
 							AWS
@@ -571,9 +649,20 @@
 					<div class="date">2014-2016</div>
 					<div class="name">Senior Software Engineer</div>
 					<div class="company">Vodafone</div>
-					<p>
-						<p>My initial role was to work as part of a small team to add new features to a SME app that was architected around BackboneJS, CQRS, Event Sourcing, RabbitMQ, RavenDB and SQL Server. This was re-worked into a WebAPI (including OWIN) back-end and Angular front-end. The domain layer was kept fairly simple but, soon grew more complicated to work in.</p><p>The AngularJS, introduced by myself, portion of the project was tested using Protractor tests (myself and another developer put this framework in) and Jasmine within a Team City release pipeline. 
-					</p>
+						<ul>
+						
+							<li>Reveloped a B2B ordering system</li>
+						
+							<li>Switching to an in memory messaging system and introducing Angular to the project team</li>
+						
+							<li>The existing system was built using CV Driven Development and needed simplifying to more easily add features in the future</li>
+						
+						</ul>
+						
+						<p>
+							<p>My initial role was to work as part of a small team to add new features to a SME app that was architected around BackboneJS, CQRS, Event Sourcing, RabbitMQ, RavenDB and SQL Server. This was re-worked into a WebAPI (including OWIN) back-end and Angular front-end. The domain layer was kept fairly simple but, soon grew more complicated to work in.</p><p>The AngularJS, introduced by myself, portion of the project was tested using Protractor tests (myself and another developer put this framework in) and Jasmine within a Team City release pipeline. 
+						</p>
+						
 						
 				</div>
 				
@@ -581,9 +670,20 @@
 					<div class="date">2013-2014</div>
 					<div class="name">Senior Software Engineer</div>
 					<div class="company">NHS</div>
-					<p>
-						<p>CMFT required a new patient record system, and there was no third party application that met their requirements. I was then brought in house to develop this with a small team. We designed a system based on an ASP.NET 4 front end, WCF backend and SQL Server database. User interface elements were designed using Kendo UI and jQuery. Later in the project I introduced Angular JS to manage some of the more com- plex screens.</p><p>In three months we had developed a system from the ground up that would integrate (using HL7 messaging) with other hospital systems, had a simple form system and ba- sic user authentication. By the time I left the project this had moved onto consultants having the ability to view patient paperwork in the application.</p> 
-					</p>
+						<ul>
+						
+							<li>Worked within a small teams to develop a custom patient record system</li>
+						
+							<li>Creating an Angular 2 application and ntegrating this into NHAPI patiend records messaging</li>
+						
+							<li>Giving the hospital a fully customisable product</li>
+						
+						</ul>
+						
+						<p>
+							<p>CMFT required a new patient record system, and there was no third party application that met their requirements. I was then brought in house to develop this with a small team. We designed a system based on an ASP.NET 4 front end, WCF backend and SQL Server database. User interface elements were designed using Kendo UI and jQuery. Later in the project I introduced Angular JS to manage some of the more com- plex screens.</p><p>In three months we had developed a system from the ground up that would integrate (using HL7 messaging) with other hospital systems, had a simple form system and ba- sic user authentication. By the time I left the project this had moved onto consultants having the ability to view patient paperwork in the application.</p> 
+						</p>
+						
 						
 						<div class="cvSkill">
 							ASP.NET
@@ -621,9 +721,20 @@
 					<div class="date">2013-2013</div>
 					<div class="name">Senior Software Engineer</div>
 					<div class="company">Go Outdoors</div>
-					<p>
-						<p>Part of the business relied heavily on a very over-worked Excel spreadsheet. On my arrival I was tasked with making this simpler to use. All numeric work was originally done using formulas. This was replaced with a COM object using the Microsoft Office Interop libraries. Validation was replaced by using FluentValidation.</p> 
-					</p>
+						<ul>
+						
+							<li>Simplified their product ordering process</li>
+						
+							<li>Keeping their existing data platform and simplifying it using VBA Script in Excel</li>
+						
+							<li>This then gave the product teams the ability concentrate on products that order flow</li>
+						
+						</ul>
+						
+						<p>
+							<p>Part of the business relied heavily on a very over-worked Excel spreadsheet. On my arrival I was tasked with making this simpler to use. All numeric work was originally done using formulas. This was replaced with a COM object using the Microsoft Office Interop libraries. Validation was replaced by using FluentValidation.</p> 
+						</p>
+						
 						
 						<div class="cvSkill">
 							AngularJS
@@ -656,9 +767,22 @@
 					<div class="date">2013-2013</div>
 					<div class="name">Senior Software Engineer</div>
 					<div class="company">We Buy Any Car</div>
-					<p>
-						<p>We Buy Any Car required a system whereby dealers could view and bid (via online auctions) for vehicles from multiple suppliers (Manheim, BCA etc).</p><p>Originally data was held in an Access database that I migrated this into SQL Server over which sat an ASP.NET WCF layer over this using Dapper for the ORM. A MVC4 front end dealt with user authentication being dealt with using ASP.NET membership providers.</p> 
-					</p>
+						<ul>
+						
+							<li>Created a new application for viewing and bidding on internet car autions</li>
+						
+							<li>Used exsiting pre-renders of site layout and converting these into an actual responsive sit</li>
+						
+							<li>Migration of existing Access to SQL Server</li>
+						
+							<li>This gave WBAC a higher turnover of inventory</li>
+						
+						</ul>
+						
+						<p>
+							<p>We Buy Any Car required a system whereby dealers could view and bid (via online auctions) for vehicles from multiple suppliers (Manheim, BCA etc).</p><p>Originally data was held in an Access database that I migrated this into SQL Server over which sat an ASP.NET WCF layer over this using Dapper for the ORM. A MVC4 front end dealt with user authentication being dealt with using ASP.NET membership providers.</p> 
+						</p>
+						
 						
 						<div class="cvSkill">
 							COM
@@ -671,9 +795,20 @@
 					<div class="date">2009-2013</div>
 					<div class="name">Senior Software Engineer</div>
 					<div class="company">Inventive IT</div>
-					<p>
-						<p>Lead developer for Umbraco CMS development (current sites include Signature and Olympic Holidays). This has involved the basics of Umbraco document management to writing custom modules to import content from existing systems and complex macros.</p><p>Heavy involved in designing and implementing the company’s flagship product (Altitude) to manage car park inventory at airports (currently is manages airport inventory at Liverpool Airport). I designed the database (tables, views, stored procedures and functions) and co-wrote both the management system and the customer facing site in ASP.NET web forms and MVC2.</p><p>Re-wrote the data layer for a pricing management system, as the previous implementation was far too slow, using SSAS (currently being used by Thomas Cook North America).</p><p>Co-developed a hotel repricing application using TDD (MSTest) and MVC3. jQuery was heavily used in this project.</p><p>Developed a Data Warehouse for Peel Airport group to enable visibility of car park volumes and passenger numbers. This used SSIS, SSRS and an ASP.NET web form front end.</p><p>Developed a new ETL processing engine for the company to manage data warehouse loading. This was written using C# and SQL Server 2008.</p><p>Developed prototype hotel booking system for iPhone to integrate with Laterooms bed bank.</p> 
-					</p>
+						<ul>
+						
+							<li>Development to create a revolutionary car park pricing tool for airports</li>
+						
+							<li>Led a small development team utilising Agile, C#, Web API and SQL Server. In addition, this required third party system integration</li>
+						
+							<li>Customers were able to better monetise their parking space inventory</li>
+						
+						</ul>
+						
+						<p>
+							<p>Lead developer for Umbraco CMS development (current sites include Signature and Olympic Holidays). This has involved the basics of Umbraco document management to writing custom modules to import content from existing systems and complex macros.</p><p>Heavy involved in designing and implementing the company’s flagship product (Altitude) to manage car park inventory at airports (currently is manages airport inventory at Liverpool Airport). I designed the database (tables, views, stored procedures and functions) and co-wrote both the management system and the customer facing site in ASP.NET web forms and MVC2.</p><p>Re-wrote the data layer for a pricing management system, as the previous implementation was far too slow, using SSAS (currently being used by Thomas Cook North America).</p><p>Co-developed a hotel repricing application using TDD (MSTest) and MVC3. jQuery was heavily used in this project.</p><p>Developed a Data Warehouse for Peel Airport group to enable visibility of car park volumes and passenger numbers. This used SSIS, SSRS and an ASP.NET web form front end.</p><p>Developed a new ETL processing engine for the company to manage data warehouse loading. This was written using C# and SQL Server 2008.</p><p>Developed prototype hotel booking system for iPhone to integrate with Laterooms bed bank.</p> 
+						</p>
+						
 						
 				</div>
 				
@@ -681,9 +816,16 @@
 					<div class="date">2006-2008</div>
 					<div class="name">Senior Software Engineer</div>
 					<div class="company">Champion Accountants</div>
-					<p>
-						<p>Developed the following applications:</p><p>Intranet - this was the largest project I undertook at Champion. It replaced paper based systems for holiday, sick forms, training and study leave. In addition team members could upload documents and write articles onto the Intranet.</p><p>Helpdesk - this replaced the email based system and allowed for prioritisation of calls, and assignment to various members of the team.</p><p>Sever Management - allowed the IT manager to see at a glance the status of all servers. Each server reported its status periodically so problems could be spotted before they became a major problem.</p> 
-					</p>
+						<ul>
+						
+							<li>Wrote helpdesk software and custom intranet</li>
+						
+						</ul>
+						
+						<p>
+							<p>Developed the following applications:</p><p>Intranet - this was the largest project I undertook at Champion. It replaced paper based systems for holiday, sick forms, training and study leave. In addition team members could upload documents and write articles onto the Intranet.</p><p>Helpdesk - this replaced the email based system and allowed for prioritisation of calls, and assignment to various members of the team.</p><p>Sever Management - allowed the IT manager to see at a glance the status of all servers. Each server reported its status periodically so problems could be spotted before they became a major problem.</p> 
+						</p>
+						
 						
 						<div class="cvSkill">
 							SSIS
@@ -716,9 +858,16 @@
 					<div class="date">2004-2006</div>
 					<div class="name">Customised Developer</div>
 					<div class="company">Checkfree</div>
-					<p>
-						Developed internal intranet system.</p> 
-					</p>
+						<ul>
+						
+							<li>Development of financial import software for banks and stock trading houses</li>
+						
+						</ul>
+						
+						<p>
+							Developed internal intranet system.</p> 
+						</p>
+						
 						
 						<div class="cvSkill">
 							C#
@@ -736,9 +885,16 @@
 					<div class="date">2001-2004</div>
 					<div class="name">Software Developer</div>
 					<div class="company">Smart Media</div>
-					<p>
-						<p>Development of various modules for the company’s flagship product. This included LDAP user integration (Java), forum development (ASP) and a fax server (Visual Basic). </p><p>DBA involving both SQL Server (7.0 and 2000) and Oracle (9i), this included both on and off site administration at varying customers throughout the UK in a client facing role operating solely from the office. Development of daily backup procedures using T-SQL that re-built the database on a Disaster Recovery server</p><p>Built, installed and DBA of an Oracle 9i database from the hardware stage through to installation on customer site.</p><p>Implementation of Extranet and Intranet servers to varying company sizes; this has led to extensive customer contact. This also included a degree of locking down exposed servers using known techniques and NSA guidelines.</p> 
-					</p>
+						<ul>
+						
+							<li>Development of modules for custom Intranet CMS</li>
+						
+						</ul>
+						
+						<p>
+							<p>Development of various modules for the company’s flagship product. This included LDAP user integration (Java), forum development (ASP) and a fax server (Visual Basic). </p><p>DBA involving both SQL Server (7.0 and 2000) and Oracle (9i), this included both on and off site administration at varying customers throughout the UK in a client facing role operating solely from the office. Development of daily backup procedures using T-SQL that re-built the database on a Disaster Recovery server</p><p>Built, installed and DBA of an Oracle 9i database from the hardware stage through to installation on customer site.</p><p>Implementation of Extranet and Intranet servers to varying company sizes; this has led to extensive customer contact. This also included a degree of locking down exposed servers using known techniques and NSA guidelines.</p> 
+						</p>
+						
 						
 						<div class="cvSkill">
 							C#
@@ -754,11 +910,16 @@
 				
 				<div class="resume-item">
 					<div class="date">2000-2001</div>
-					<div class="name">I.T. Consultant</div>
+					<div class="name">IT Consultant</div>
 					<div class="company">LogicaCMG</div>
-					<p>
-						<p>Worked for the Space and Defence division.</p> 
-					</p>
+						<ul>
+						
+						</ul>
+						
+						<p>
+							<p>Worked for the Space and Defence division.</p> 
+						</p>
+						
 						
 				</div>
 				
@@ -902,6 +1063,38 @@
 					</div>
 				</div>
 				
+				<div class="resume-item active">
+					<div class="row">
+						<div class="col col-d-4 col-t-4 col-m-12">
+							<div class=" centre-image">
+								<img width=160 src="assets/img/certification/github-copilot.png" />
+							</div>
+						</div>
+						<div class="col col-d-8 col-t-8 col-m-12">
+							<div class="name"><i class="ion ion-GitHub"></i> Github Copilot</div>
+							<div class="company">
+								
+								<p>Responsible AI</p>
+								
+								<p>GitHub Copilot plans and features</p>
+								
+								<p>How GitHub Copilot works and handles data</p>
+								
+								<p>Prompt Crafting and Prompt Engineering</p>
+								
+								<p>Developer use cases for AI</p>
+								
+								<p>Testing with GitHub Copilot</p>
+								
+								<p>Privacy fundamentals and content exclusions</p>
+								
+							</div>
+							<div class="date">2024</div>
+							<div class="date"><a target="_blank" href="https://www.credly.com/badges/81a5612f-d72e-4494-8e06-452b92f29e3f/public_url">Validate</a></div>
+						</div>
+					</div>
+				</div>
+				
 			</div>
 		
 			
@@ -995,112 +1188,52 @@
 
 	<div id="skills">
 		
-		<div skill-type="language" skill-weight="4" data-aos="zoom-in">
-		  T-SQL
-		</div>
-	  
-		<div skill-type="language" skill-weight="3" data-aos="zoom-in">
-		  bash
-		</div>
-	  
 		<div skill-type="framework" skill-weight="4" data-aos="zoom-in">
 		  ASP.NET
-		</div>
-	  
-		<div skill-type="framework" skill-weight="3" data-aos="zoom-in">
-		  Vue.JS
-		</div>
-	  
-		<div skill-type="tool" skill-weight="3" data-aos="zoom-in">
-		  Azure
-		</div>
-	  
-		<div skill-type="framework" skill-weight="1" data-aos="zoom-in">
-		  Umbraco
 		</div>
 	  
 		<div skill-type="framework" skill-weight="5" data-aos="zoom-in">
 		  .NET Core
 		</div>
 	  
-		<div skill-type="tool" skill-weight="2" data-aos="zoom-in">
-		  Azure Devops
-		</div>
-	  
 		<div skill-type="tool" skill-weight="1" data-aos="zoom-in">
-		  Kubernetes
-		</div>
-	  
-		<div skill-type="tool" skill-weight="5" data-aos="zoom-in">
-		  GitHub
+		  Subversion
 		</div>
 	  
 		<div skill-type="language" skill-weight="4" data-aos="zoom-in">
-		  TypeScript
+		  T-SQL
+		</div>
+	  
+		<div skill-type="framework" skill-weight="2" data-aos="zoom-in">
+		  Jest
 		</div>
 	  
 		<div skill-type="framework" skill-weight="2" data-aos="zoom-in">
 		  React
 		</div>
 	  
-		<div skill-type="tool" skill-weight="1" data-aos="zoom-in">
-		  Mercurial
-		</div>
-	  
-		<div skill-type="language" skill-weight="5" data-aos="zoom-in">
-		  C#
-		</div>
-	  
 		<div skill-type="framework" skill-weight="3" data-aos="zoom-in">
-		  Entity Framework
+		  Vue.JS
 		</div>
 	  
-		<div skill-type="language" skill-weight="3" data-aos="zoom-in">
-		  JavaScript
-		</div>
-	  
-		<div skill-type="framework" skill-weight="5" data-aos="zoom-in">
-		  .NET framework
+		<div skill-type="tool" skill-weight="1" data-aos="zoom-in">
+		  Kubernetes
 		</div>
 	  
 		<div skill-type="framework" skill-weight="4" data-aos="zoom-in">
 		  NUnit
 		</div>
 	  
-		<div skill-type="tool" skill-weight="1" data-aos="zoom-in">
-		  AWS
-		</div>
-	  
-		<div skill-type="framework" skill-weight="1" data-aos="zoom-in">
-		  Spring
-		</div>
-	  
-		<div skill-type="framework" skill-weight="2" data-aos="zoom-in">
-		  AngularJS
-		</div>
-	  
-		<div skill-type="tool" skill-weight="5" data-aos="zoom-in">
-		  GitHub Enterprise
-		</div>
-	  
-		<div skill-type="tool" skill-weight="1" data-aos="zoom-in">
-		  Subversion
-		</div>
-	  
-		<div skill-type="tool" skill-weight="4" data-aos="zoom-in">
-		  Git
-		</div>
-	  
-		<div skill-type="framework" skill-weight="1" data-aos="zoom-in">
-		  Thymeleaf
-		</div>
-	  
-		<div skill-type="framework" skill-weight="4" data-aos="zoom-in">
-		  NSubstitue
+		<div skill-type="framework" skill-weight="5" data-aos="zoom-in">
+		  .NET framework
 		</div>
 	  
 		<div skill-type="tool" skill-weight="3" data-aos="zoom-in">
 		  Docker
+		</div>
+	  
+		<div skill-type="framework" skill-weight="1" data-aos="zoom-in">
+		  Thymeleaf
 		</div>
 	  
 		<div skill-type="language" skill-weight="3" data-aos="zoom-in">
@@ -1111,12 +1244,72 @@
 		  Web API
 		</div>
 	  
-		<div skill-type="framework" skill-weight="2" data-aos="zoom-in">
-		  Jest
+		<div skill-type="language" skill-weight="3" data-aos="zoom-in">
+		  JavaScript
+		</div>
+	  
+		<div skill-type="language" skill-weight="4" data-aos="zoom-in">
+		  TypeScript
+		</div>
+	  
+		<div skill-type="tool" skill-weight="3" data-aos="zoom-in">
+		  Azure
+		</div>
+	  
+		<div skill-type="framework" skill-weight="4" data-aos="zoom-in">
+		  NSubstitue
+		</div>
+	  
+		<div skill-type="tool" skill-weight="4" data-aos="zoom-in">
+		  Git
+		</div>
+	  
+		<div skill-type="tool" skill-weight="1" data-aos="zoom-in">
+		  Mercurial
+		</div>
+	  
+		<div skill-type="framework" skill-weight="1" data-aos="zoom-in">
+		  Spring
+		</div>
+	  
+		<div skill-type="language" skill-weight="5" data-aos="zoom-in">
+		  C#
 		</div>
 	  
 		<div skill-type="framework" skill-weight="2" data-aos="zoom-in">
 		  Angular
+		</div>
+	  
+		<div skill-type="tool" skill-weight="1" data-aos="zoom-in">
+		  AWS
+		</div>
+	  
+		<div skill-type="tool" skill-weight="5" data-aos="zoom-in">
+		  GitHub Enterprise
+		</div>
+	  
+		<div skill-type="framework" skill-weight="1" data-aos="zoom-in">
+		  Umbraco
+		</div>
+	  
+		<div skill-type="framework" skill-weight="3" data-aos="zoom-in">
+		  Entity Framework
+		</div>
+	  
+		<div skill-type="language" skill-weight="3" data-aos="zoom-in">
+		  bash
+		</div>
+	  
+		<div skill-type="tool" skill-weight="2" data-aos="zoom-in">
+		  Azure Devops
+		</div>
+	  
+		<div skill-type="tool" skill-weight="5" data-aos="zoom-in">
+		  GitHub
+		</div>
+	  
+		<div skill-type="framework" skill-weight="2" data-aos="zoom-in">
+		  AngularJS
 		</div>
 	  
 	</div>
