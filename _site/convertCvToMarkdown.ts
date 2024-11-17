@@ -1,5 +1,8 @@
 import * as fs from 'fs';
 import * as yaml from 'js-yaml';
+import * as markdownPdf from 'markdown-pdf';
+import * as docx from 'docx';
+import { Document, Packer, Paragraph, TextRun } from 'docx';
 
 interface ResumeItem {
   year: string;
@@ -34,6 +37,21 @@ function convertCvToMarkdown(inputFile: string, outputFile: string) {
   });
 
   fs.writeFileSync(outputFile, markdownContent);
+
+  // Convert markdown to PDF
+  markdownPdf().from(outputFile).to(outputFile.replace('.md', '.pdf'), () => {
+    console.log('PDF file created');
+  });
+
+  // Convert markdown to Word
+  const doc = new Document();
+  const paragraphs = markdownContent.split('\n').map(line => new Paragraph(line));
+  doc.addSection({ children: paragraphs });
+
+  Packer.toBuffer(doc).then(buffer => {
+    fs.writeFileSync(outputFile.replace('.md', '.docx'), buffer);
+    console.log('Word file created');
+  });
 }
 
 convertCvToMarkdown('_data/content.yml', 'cv.md');
