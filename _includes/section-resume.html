@@ -1,33 +1,36 @@
-{% assign content = site.data.content['resume'] %}
+{% assign content = site.data.cv %}
 {% assign education = site.data.education %}
 
 <!-- Resume -->
 <div class="content resume">
-
-	{{ if content.title != '' }}
-	<!-- title -->
-	<div class="title">{{ content.title }}</div>
-	{{ endif }}
 
 	<!-- content -->
 	<div class="row">
 
 		<!-- experience -->
 		<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-			
+
+
 			<div class="resume-title border-line-h">
-				<div class="icon"><i class="ion ion-{{ content.experience.icon }}"></i></div>
-				<div class="name">{{ content.experience.title }}</div>
+				<div class="icon"><i class="ion ion-{{ content.icon }}"></i></div>
+				<div class="name">{{ content.title }}</div>
 			</div>
 			<div class="resume-items">
-				{% for item in content.experience.items %}
+				{% for item in content.items %}
 				<div class="resume-item{% if item.h_line == 1 %} border-line-h{% endif %}{% if item.active == 1 %} active{% endif %}">
 					<div class="date">{{ item.year }}</div>
 					<div class="name">{{ item.role }}</div>
 					<div class="company">{{ item.company }}</div>
-					<p>
-						{{ item.text }} 
-					</p>
+						<ul>
+						{% for bullet in item.bullets %}
+							<li>{{ bullet }}</li>
+						{% endfor %}
+						</ul>
+						{% if item.text != '' %}
+						<p>
+							{{ item.text }} 
+						</p>
+						{% endif %}
 						{% for skill in item.skills %}
 						<div class="cvSkill">
 							{{ skill }}
