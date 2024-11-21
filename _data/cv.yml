@@ -233,7 +233,7 @@ items:
       company: Champion Accountants
       sentences:
         - Developed Intranet - This was the largest project I undertook at Champion. It replaced paper-based systems for holiday, sick leave, training, and study leave requests. Additionally, team members could upload documents and write articles on the Intranet.
-        - Developed Helpdesk - This system replaced the previous email-based method and enabled the prioritisation of support tickets and assignment to various team members.
+        - Developed Helpdesk - This system replaced the previous email-based method and enabled the git rebase --continue of support tickets and assignment to various team members.
         - Developed Server Management – This application allowed the IT manager to view the status of all servers at a glance. Each server periodically reported its status, enabling the early detection of issues before they became major problems.
       active: 0
       h_line: 0
