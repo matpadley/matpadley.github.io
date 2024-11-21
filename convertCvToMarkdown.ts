@@ -13,12 +13,19 @@ interface ResumeItem {
   bullets: string[];
 }
 
+interface Contact {
+  label: string;
+  type: string;
+  link: string
+}
+
 interface Resume {
   name: string;
   title: string;
   icon: string;
   items: ResumeItem[];
   experiences: string[];
+  contacts_form: Contact[];
 }
 
 function convertCvToMarkdown(inputFile: string, outputFile: string) {
@@ -26,6 +33,29 @@ function convertCvToMarkdown(inputFile: string, outputFile: string) {
   const data: Resume = yaml.load(fileContents) as Resume;
 
   let markdownContent = `# ${data.name}\n\n`;
+
+  if (data.contacts_form && data.contacts_form.length > 0) {
+    markdownContent += `## Contacts\n\n`;
+    data.contacts_form.forEach((contact, index) => {
+      switch (contact.type) {
+        case 'link':
+          markdownContent += `[${contact.label}](${contact.link})`;
+          break;
+        case 'email':
+          markdownContent += `[${contact.label}](mailto:${contact.link})`;
+          break;
+        case 'phone':
+          markdownContent += `${contact.label}`;
+          break;
+      }
+      if (index < data.contacts_form.length - 1) {
+        markdownContent += ' - ';
+      }
+    });
+    markdownContent += '\n\n'; // Add a new line after all contacts are processed
+  }
+
+  markdownContent += `## Experience\n\n`;
 
   data.experiences.forEach(experiance => {
     markdownContent += `${experiance}\n\n`;

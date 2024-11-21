@@ -1,5 +1,11 @@
 # Mathew R. Padley
 
+## Contacts
+
+7595314113 - [LinkedIn](https://www.linkedin.com/in/matpadley) - [GitHub](https://github.com/matpadley/) - [Email](mailto:mailto:matpadley@hewley.co.uk)
+
+## Experience
+
 I have working across many industries (travel, health, finance, communications) which has led to working with different team types and people across the world. My main skill set is within the Microsoft software.
 
 The past few years has seen with extenviely working with the CI/CD world with Github and TeamCity. Providing guidance on migration from BitBucket and TeamCity to the GitHub universe.
@@ -26,7 +32,7 @@ Part of a team tasked with migrating the company's existing source control and C
 
 
 
-- Adding new functionality to an end clients medical delivery system
+- Adding new functionality to a clients medical delivery system
 
 - A lot of code analysis to understand the brownfield software structure and working within this to add new code that was easily maintainable
 
@@ -34,7 +40,7 @@ Part of a team tasked with migrating the company's existing source control and C
 
 Feature lead for the API team, working with the .NET Framework and some Blazor. Responsibilities included liaising with the customer to gather requirements and collaborating with the internal BA, often explaining complex technical reasoning behind design decisions.
 
-Additionally, I proposed a process to logically split the entire solution into its business components to simplify development and deployment in Azure DevOps, though this approach has not yet been implemented."
+Additionally, I proposed to logically split the entire solution into its business components to simplify development and deployment in Azure DevOps, though this approach has not yet been implemented.
 
 
 
@@ -50,6 +56,8 @@ Additionally, I proposed a process to logically split the entire solution into i
 - The end client needed a new portal to manage their housing as it was all done manually
 
 Front-end developer utilizing Vue.js and AWS Lambdas for a housing client. This role involved collaborating closely with the client on interface design elements and coordinating with development leads regarding front-end architecture. All Vue components were developed with a Test-Driven Development (TDD) approach using Jest.
+
+I was responsible for the integration of AWS TFA into the client's existing portal. This led to rasing a system bug with Amazon around their TFA system.
 
 
 
@@ -75,7 +83,7 @@ Developed a form import service, using .NET Core 3.1 and Docker, from a thrid pa
 
 - Worked on re-development of their car parking software
 
-- aking the 10 year old system, understanding what it currently did and re-writing it a simpler manner
+- Taking the 10 year old system, understanding what it currently did and re-writing it a simpler manner
 
 - I worked on the original product so had existing knowledge of how it was put together
 
@@ -94,9 +102,11 @@ The software I developed at Inventive IT was being utilized by a client of Infin
 
 - The test team were creating bugs that could have been mitigated if more attention was paid to the code
 
-My primary role was enhancing the bespoke case management system, developed using Web API 2, TypeScript with Angular, and a SQL Server database. Developing workflows—such as Part 8, Part 18, Part 20, Offers, Payments, Pre-Litigation, and Settlements—was a particularly cumbersome process.
+My primary role was enhancing the bespoke case management system. Legal workflows were developed Web API 2, TypeScript with Angular, and a SQL Server database.
 
-Together with a colleague, I introduced several improvements to streamline this process and reduce the development-to-testing cycle. Additionally, I served as the squad lead for a team of two to three developers, managing sprint workloads and addressing queries about ongoing work. In this capacity, I was responsible for developing the domain models, while the other squad members focused on implementing the workflows."
+Developing workflows—such as Part 8, Part 18, Part 20, Offers, Payments, Pre-Litigation, and Settlements—was a particularly cumbersome process.
+
+Together with a colleague, I introduced several improvements to streamline this process and reduce the development-to-testing cycle. Additionally, I served as the squad lead for a team of three developers, managing sprint workloads and addressing queries about ongoing work. In this capacity, I was responsible for developing the domain models, while the other squad members focused on implementing the workflows.
 
 
 
@@ -107,7 +117,7 @@ Together with a colleague, I introduced several improvements to streamline this 
 
 - Migrated on-prem virtual machines to AWS
 
-- Using Amazon tooling to move multi Gigabyte VMS to AWS
+- Using Amazon tooling to move multi Gigabyte VMs to AWS
 
 - Allowed the team to concentrate on the features (which we high transaction volume) instead of worrying about hardware
 
@@ -128,11 +138,11 @@ This role primarily involved supporting existing applications. Key responsibilit
 
 My initial role involved working as part of a small team to add new features to an SME app built using BackboneJS, CQRS, Event Sourcing, RabbitMQ, RavenDB, and SQL Server. This application was later re-architected into a WebAPI back-end (including OWIN) and an Angular front-end. While the domain layer started as relatively simple, it gradually became more complex over time.
 
-The AngularJS portion of the project, which I introduced, was tested using Protractor (a testing framework implemented by myself and another developer) and Jasmine, integrated into a TeamCity release pipeline."
+The AngularJS portion of the project, which I introduced, was tested using Protractor (a testing framework implemented by myself and another developer) and Jasmine, integrated into a TeamCity release pipeline.
 
 
 
-### NHS
+### NHS - Manchester Royal Infirmary
 #### Senior Software Engineer - 2013-2014
 
 
@@ -142,6 +152,10 @@ The AngularJS portion of the project, which I introduced, was tested using Protr
 - Creating an Angular 2 application and ntegrating this into NHAPI patiend records messaging
 
 - Giving the hospital a fully customisable product
+
+CMFT required a new patient record system, as no third-party application met their requirements. I was brought in-house to develop this system as part of a small team. We designed the system with an ASP.NET 4 front end, a WCF back end, and a SQL Server database. The user interface elements were created using Kendo UI and jQuery. Later in the project, I introduced AngularJS to manage some of the more complex screens.
+
+Within three months, we had developed a system from the ground up that integrated with other hospital systems using HL7 messaging. It included a simple form system and basic user authentication. By the time I left the project, the system had advanced to allow consultants to view patient paperwork directly within the application.
 
 
 
@@ -154,7 +168,9 @@ The AngularJS portion of the project, which I introduced, was tested using Protr
 
 - Keeping their existing data platform and simplifying it using VBA Script in Excel
 
-- This then gave the product teams the ability concentrate on products that order flow
+- This gave the product teams the ability concentrate on products that order flow
+
+A critical part of the business relied heavily on an overly complex Excel spreadsheet. Upon my arrival, I was tasked with simplifying its use. Initially, all numeric operations were handled through formulas, which I replaced with a COM object utilizing the Microsoft Office Interop libraries.
 
 
 
@@ -171,6 +187,10 @@ The AngularJS portion of the project, which I introduced, was tested using Protr
 
 - This gave WBAC a higher turnover of inventory
 
+We Buy Any Car required a system that allowed dealers to view and bid (via online auctions) on vehicles from multiple suppliers (e.g., Manheim, BCA, etc.).
+
+The data was initially stored in an Access database, which I migrated to SQL Server. On top of this, I implemented an ASP.NET WCF layer using Dapper as the ORM. The front end was built with MVC4, handling user authentication through ASP.NET membership providers.
+
 
 
 ### Inventive IT
@@ -184,6 +204,20 @@ The AngularJS portion of the project, which I introduced, was tested using Protr
 
 - Customers were able to better monetise their parking space inventory
 
+I played a key role in designing and implementing the company’s flagship product, Altitude, which manages car park inventory at airports (currently in use at Liverpool Airport). I designed the database (including tables, views, stored procedures, and functions) and co-wrote both the management system and the customer-facing site using ASP.NET Web Forms and MVC2.
+
+Lead developer for Umbraco CMS development (current sites include Signature and Olympic Holidays). This role involved everything from basic Umbraco document management to writing custom modules for importing content from existing systems and creating complex macros.
+
+Re-wrote the data layer for a pricing management system, as the original implementation was too slow. The new version utilizes SSAS and is currently used by Thomas Cook North America.
+
+Co-developed a hotel repricing application using TDD (MSTest) and MVC3, with heavy use of jQuery.
+
+Developed a Data Warehouse for the Peel Airport Group, enabling visibility into car park volumes and passenger numbers. This solution utilized SSIS, SSRS, and an ASP.NET Web Forms front end.
+
+Developed a new ETL processing engine to manage data warehouse loading, written in C# and SQL Server 2008.
+
+Developed a prototype hotel booking system for iPhone, integrated with Laterooms' bed bank.
+
 
 
 ### Champion Accountants
@@ -192,6 +226,12 @@ The AngularJS portion of the project, which I introduced, was tested using Protr
 
 
 - Wrote helpdesk software and custom intranet
+
+Developed Intranet - This was the largest project I undertook at Champion. It replaced paper-based systems for holiday, sick leave, training, and study leave requests. Additionally, team members could upload documents and write articles on the Intranet.
+
+Developed Helpdesk - This system replaced the previous email-based method and enabled the prioritization of support tickets and assignment to various team members.
+
+Developed Server Management – This application allowed the IT manager to view the status of all servers at a glance. Each server periodically reported its status, enabling the early detection of issues before they became major problems.
 
 
 
@@ -212,6 +252,14 @@ This role involved working with the client to gather requirements and develop th
 
 
 - Development of modules for custom Intranet CMS
+
+Developed key modules for the company’s flagship product, including LDAP user integration (Java), forum development (ASP), and a fax server (Visual Basic).
+
+Worked as a DBA with SQL Server (7.0/2000) and Oracle (9i), providing both on-site and off-site administration for clients across the UK. Developed T-SQL-based backup procedures for Disaster Recovery.
+
+Built and managed an Oracle 9i database, from hardware setup to installation at customer sites.
+
+Implemented Extranet and Intranet servers for various company sizes, securing exposed servers using best practices and NSA guidelines.
 
 
 
