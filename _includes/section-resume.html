@@ -26,11 +26,11 @@
 							<li>{{ bullet }}</li>
 						{% endfor %}
 						</ul>
-						{% if item.text != '' %}
+						{% for text in item.text %}
 						<p>
-							{{ item.text }} 
+							{{ text }} 
 						</p>
-						{% endif %}
+						{% endfor %}
 						{% for skill in item.skills %}
 						<div class="cvSkill">
 							{{ skill }}
