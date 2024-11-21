@@ -7,7 +7,7 @@
 
       
 
-name: "Mathew R Padley"
+name: "Mathew R. Padley"
 title: "Curriculum Vitae"
 icon: "briefcase"
 contacts_form:
@@ -23,7 +23,7 @@ contacts_form:
     link: mailto:matpadley@hewley.co.uk
   - label: matpadley@hewley.co.uk
     type: "mail"
-experience:
+experiences:
     - I have working across many industries (travel, health, finance, communications) which has led to working with different team types and people across the world. My main skill set is within the Microsoft software. 
     - The past few years has seen with extenviely working with the CI/CD world specifically and Github and TeamCity. Providing guidance on migration from BitBucket and TeamCity to GitHub universe.
     - During my working life the solution myself and the team at Inventive IT created was the most fulfilling. We worked from a whiteboard sketch to a fulling working system in about a year. This involved weekly software reviews and working with a University to try and automate a pricing model (ML was not a real industry wide entity at this point). On the first test of the entire system, which included inventory management, customer booking and third party integration everything went according to plan. 

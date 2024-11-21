@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as yaml from 'js-yaml';
-import * as markdownPdf from 'markdown-pdf';
+import markdownPdf from 'markdown-pdf';
 import * as docx from 'docx';
 import { Document, Packer, Paragraph, TextRun } from 'docx';
 
@@ -10,30 +10,38 @@ interface ResumeItem {
   company: string;
   text: string;
   skills: string[];
+  bullets: string[];
 }
 
 interface Resume {
+  name: string;
   title: string;
-  experience: {
-    title: string;
-    icon: string;
-    items: ResumeItem[];
-  };
+  icon: string;
+  items: ResumeItem[];
+  experiences: string[];
 }
 
 function convertCvToMarkdown(inputFile: string, outputFile: string) {
   const fileContents = fs.readFileSync(inputFile, 'utf8');
   const data: Resume = yaml.load(fileContents) as Resume;
 
-  let markdownContent = `# ${data.title}\n\n`;
+  let markdownContent = `# ${data.name}\n\n`;
 
-  data.experience.items.forEach(item => {
+  data.experiences.forEach(experriance => {
+    markdownContent += `${experriance}\n\n`;
+  });
+
+  data.items.forEach(item => {
     markdownContent += `### ${item.company}\n`;
-    markdownContent += `${item.role} - ${item.year}\n\n`;
+    markdownContent += `#### ${item.role} - ${item.year}\n\n`;
+    if (item.skills && item.bullets.length > 0) {
+      markdownContent += `- ${item.bullets.join('\n- ')}\n\n`;
+    }
     markdownContent += `${item.text}\n\n`;
     if (item.skills && item.skills.length > 0) {
-      markdownContent += `- ${item.skills.join('\n- ')}\n\n`;
+      markdownContent += `${item.skills.join('- ')}`;
     }
+    markdownContent += `\n\n`;
   });
 
   fs.writeFileSync(outputFile, markdownContent);
@@ -42,16 +50,19 @@ function convertCvToMarkdown(inputFile: string, outputFile: string) {
   markdownPdf().from(outputFile).to(outputFile.replace('.md', '.pdf'), () => {
     console.log('PDF file created');
   });
-
+  
+/*
   // Convert markdown to Word
-  const doc = new Document();
+  const doc = new Document({
+    sections: []
+  });
   const paragraphs = markdownContent.split('\n').map(line => new Paragraph(line));
-  doc.addSection({ children: paragraphs });
+  doc.sections.push({ children: paragraphs });
 
   Packer.toBuffer(doc).then(buffer => {
     fs.writeFileSync(outputFile.replace('.md', '.docx'), buffer);
     console.log('Word file created');
-  });
+  });*/
 }
 
-convertCvToMarkdown('_data/content.yml', 'cv.md');
+convertCvToMarkdown('_data/cv.yml', 'cv.md');
