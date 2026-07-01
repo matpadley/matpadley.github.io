@@ -1,0 +1,343 @@
+baseURL = "https://matpadley.github.io/"
+title = "Mathew Padley"
+languageCode = "en-us"
+theme = "adritian-free-hugo-theme"
+
+[pagination]
+pagerSize = 6
+
+# Exclude footer section from generating list pages (index.html and index.xml)
+[outputs]
+  page = ["HTML"]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+  footer = []
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  author = "authors"
+  series = "series"
+  topic = "topics"
+
+# Explicitly prevent the footer section from generating any output
+[outputFormats.footerSection]
+
+disableKinds = ["footerSection"]
+
+[module]
+[[module.mounts]]
+source = "archetypes"
+target = "archetypes"
+
+[[module.mounts]]
+source = "assets"
+target = "assets"
+
+[[module.mounts]]
+source = "i18n"
+target = "i18n"
+
+[[module.mounts]]
+source = "layouts"
+target = "layouts"
+
+[[module.mounts]]
+source = "static"
+target = "static"
+
+# Required so the theme can load Bootstrap from npm
+[[module.mounts]]
+source = "node_modules/bootstrap/scss"
+target = "assets/scss/bootstrap"
+
+[[module.mounts]]
+source = "node_modules/bootstrap/dist/js"
+target = "assets/js/bootstrap"
+
+[[module.mounts]]
+source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+target = "assets/js/vendor/bootstrap.bundle.min.js"
+
+[[module.mounts]]
+source = "node_modules/bootstrap-print-css/css/bootstrap-print.css"
+target = "assets/css/bootstrap-print.css"
+
+
+[params]
+title = "Mathew Padley"
+description = "Mathew Padley - CV & Articles"
+themeColor = "#478079"
+
+# Color scheme: default | ocean | forest | rose | slate | midnight | warm
+colorScheme = "default"
+
+[params.colorSchemeSwitcher]
+enable = true
+
+[params.colorSchemeSwitcher.selector.disable]
+footer = false
+header = false
+
+[params.seo]
+siteName = "Mathew Padley"
+siteDescription = "Mathew Padley - CV & Articles"
+
+[params.seo.person]
+name = "Mathew Padley"
+url = "https://matpadley.github.io"
+sameAs = ["https://github.com/matpadley"]
+sections = ["about", "education", "experience", "contact"]
+
+[params.favicons]
+source = "icons/favicon.png"
+
+[params.blog]
+layout = "sidebar-right"
+sidebarWidth = "25"
+narrowContent = true
+showCategories = true
+showRecentPosts = true
+recentPostCount = 5
+listStyle = "summary"
+listLayout = "default"
+featured_sort_by_weight = true
+featured_sort_by_date = false
+
+[params.experience]
+showJobCard = true
+
+[params.navbarOverflow]
+mode = "dropdown"
+
+[params.colorTheme]
+[params.colorTheme.selector.disable]
+footer = false
+header = false
+mobileHeader = false
+
+[params.languages.selector.disable]
+footer = false
+header = false
+mobileHeader = false
+
+[languages]
+[languages.en]
+disabled = false
+locale = "en"
+direction = "ltr"
+label = "English"
+languageName = "English"
+title = ""
+weight = 0
+
+[languages.en.menus]
+[[languages.en.menus.header]]
+name = "Home"
+URL = "/"
+weight = 1
+
+[[languages.en.menus.header]]
+name = "CV"
+URL = "/cv"
+weight = 2
+
+[[languages.en.menus.header]]
+name = "Articles"
+URL = "/articles"
+weight = 3
+
+[[languages.en.menus.header]]
+pre = "email"
+name = "email"
+URL = "/#contact"
+weight = 4
+
+[[languages.en.menus.header]]
+pre = "search"
+name = "Search"
+URL = "/search"
+weight = 5
+
+[[languages.en.menus.footer]]
+name = "Home"
+URL = "/"
+weight = 1
+
+[[languages.en.menus.footer]]
+name = "CV"
+URL = "/cv"
+weight = 2
+
+[[languages.en.menus.footer]]
+name = "Articles"
+URL = "/articles"
+weight = 3
+
+[[languages.en.menus.footer]]
+name = "Contact"
+URL = "/#contact"
+weight = 4
+
+
+[languages.fr]
+disabled = false
+locale = "fr"
+direction = "ltr"
+label = "Français"
+languageName = "Français"
+title = ""
+weight = 1
+
+[languages.fr.menus]
+[[languages.fr.menus.header]]
+name = "Accueil"
+URL = "/fr/"
+weight = 1
+
+[[languages.fr.menus.header]]
+name = "CV"
+URL = "/fr/cv"
+weight = 2
+
+[[languages.fr.menus.header]]
+name = "Articles"
+URL = "/articles"
+weight = 3
+
+[[languages.fr.menus.header]]
+pre = "email"
+name = "courriel"
+URL = "/fr/#contact"
+weight = 4
+
+[[languages.fr.menus.header]]
+pre = "search"
+name = "Recherche"
+URL = "/search"
+weight = 5
+
+[[languages.fr.menus.footer]]
+name = "Accueil"
+URL = "/fr/"
+weight = 1
+
+[[languages.fr.menus.footer]]
+name = "CV"
+URL = "/fr/cv"
+weight = 2
+
+[[languages.fr.menus.footer]]
+name = "Articles"
+URL = "/articles"
+weight = 3
+
+[[languages.fr.menus.footer]]
+name = "Contact"
+URL = "/fr/#contact"
+weight = 4
+
+
+[languages.es]
+disabled = false
+locale = "es"
+direction = "ltr"
+label = "Español"
+languageName = "Español"
+title = ""
+weight = 2
+
+[languages.es.menus]
+[[languages.es.menus.header]]
+name = "Inicio"
+URL = "/es/"
+weight = 1
+
+[[languages.es.menus.header]]
+name = "CV"
+URL = "/es/cv"
+weight = 2
+
+[[languages.es.menus.header]]
+name = "Artículos"
+URL = "/articles"
+weight = 3
+
+[[languages.es.menus.header]]
+pre = "email"
+name = "correo"
+URL = "/es/#contact"
+weight = 4
+
+[[languages.es.menus.header]]
+pre = "search"
+name = "Buscar"
+URL = "/search"
+weight = 5
+
+[[languages.es.menus.footer]]
+name = "Inicio"
+URL = "/es/"
+weight = 1
+
+[[languages.es.menus.footer]]
+name = "CV"
+URL = "/es/cv"
+weight = 2
+
+[[languages.es.menus.footer]]
+name = "Artículos"
+URL = "/articles"
+weight = 3
+
+[[languages.es.menus.footer]]
+name = "Contacto"
+URL = "/es/#contact"
+weight = 4
+
+
+# Plugins
+[params.plugins]
+
+[[params.plugins.css]]
+URL = "css/custom.css"
+[[params.plugins.css]]
+URL = "css/adritian-icons.css"
+[[params.plugins.css]]
+URL = "css/bootstrap-print.css"
+
+[[params.plugins.js]]
+URL = "js/rad-animations.js"
+[[params.plugins.js]]
+URL = "js/sticky-header.js"
+[[params.plugins.js]]
+URL = "js/library/fontfaceobserver.js"
+
+[[params.plugins.scss]]
+URL = "scss/adritian.scss"
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    lineNos = false
+    noClasses = false
+    style = "github"
+
+[imaging]
+  resampleFilter = "Lanczos"
+  quality = 85
+  anchor = "Smart"
+
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+  minifyOutput = true
