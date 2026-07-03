@@ -32,3 +32,50 @@ html[data-bs-theme="dark"] #breadcrumb-bar .breadcrumbs {
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
 }
+
+/*
+ * Accordion styling for the CV page's experience list
+ * (layouts/shortcodes/experience-list.html overrides the theme's shortcode of
+ * the same name to use <details>/<summary> so each job can be collapsed).
+ */
+.experience--accordion {
+    border-bottom: 1px solid var(--bs-border-color);
+    padding: 1rem 0;
+}
+
+.experience--accordion summary {
+    cursor: pointer;
+    list-style: none;
+}
+
+.experience--accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+.experience--accordion summary .experience__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    padding-right: 2rem;
+}
+
+.experience--accordion summary .experience__header::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--bs-secondary-color);
+}
+
+.experience--accordion[open] summary .experience__header::after {
+    content: "\2212";
+}
+
+/* Force every entry open when printing, regardless of on-screen collapsed state */
+@media print {
+    .experience--accordion:not([open]) > *:not(summary) {
+        display: block !important;
+    }
+}
