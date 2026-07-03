@@ -72,7 +72,7 @@ description = "Mathew Padley - CV & Articles"
 themeColor = "#478079"
 
 # Color scheme: default | ocean | forest | rose | slate | midnight | warm
-colorScheme = "default"
+# colorScheme = "default"
 
 [params.colorSchemeSwitcher]
 enable = true
