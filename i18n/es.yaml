@@ -1,3 +1,9 @@
+- id: "logo_text1"
+  translation: "Mathew"
+
+- id: "logo_text2"
+  translation: "Padley"
+
 - id: "head_title"
   translation: "Mathew Padley"
 
