@@ -13,15 +13,19 @@
 }
 
 /* Strip the card-style box (background/border/shadow) off the breadcrumb bar
- * so it reads as a plain inline trail, consistent with the rest of the site. */
-.breadcrumbs {
+ * so it reads as a plain inline trail, consistent with the rest of the site.
+ * Scoped under #breadcrumb-bar (not just .breadcrumbs) so this override beats
+ * the theme's own .breadcrumbs rule in default-adritian.min.css on specificity
+ * rather than relying on stylesheet load order, since that file is linked
+ * after this one and would otherwise win any tie. */
+#breadcrumb-bar .breadcrumbs {
     background: none;
     padding: 0.75rem 0;
     border-radius: 0;
     box-shadow: none;
 }
 
-html[data-bs-theme="dark"] .breadcrumbs {
+html[data-bs-theme="dark"] #breadcrumb-bar .breadcrumbs {
     background: none;
     border: none;
     box-shadow: none;
