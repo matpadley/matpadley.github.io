@@ -1,0 +1,14 @@
+/* You can customize theme styles here */
+
+/*
+ * Fix: theme's breadcrumb bar (assets/scss/_raditian.scss) styles itself with
+ * --rad-color-* custom properties that the theme never defines anywhere, so it
+ * always fell back to hardcoded gray/black instead of the site's active color
+ * scheme. Map them to the real Bootstrap variables the rest of the site uses.
+ */
+:root {
+    --rad-color-box: var(--bs-tertiary-bg);
+    --rad-color-primary: var(--bs-primary);
+    --rad-color-text-secondary: var(--bs-secondary-color);
+    --rad-color-text-muted: var(--bs-tertiary-color);
+}
