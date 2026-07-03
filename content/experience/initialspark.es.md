@@ -6,6 +6,7 @@ jobTitle: "Desarrollador Senior"
 company: "InitialSpark"
 location: "Leeds"
 duration: "Mayo 2020 - Julio 2020"
+summary: "Creación de informes y páginas CRUD en Java con Spring y Thymeleaf, en un puesto de corta duración."
 ---
 
 Puesto de corta duración para cubrir una necesidad de desarrollo en Java. Creación de informes sencillos y páginas CRUD usando Spring y Thymeleaf.

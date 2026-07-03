@@ -6,6 +6,7 @@ jobTitle: "Développeur Logiciel Senior"
 company: "Inventive IT"
 location: "Manchester"
 duration: "2008 - 2013"
+summary: "Conception et développement du système de stationnement aéroportuaire Altitude, de la base de données au front-end."
 ---
 
 Le produit phare d'Inventive IT, Altitude, gère un système de stationnement en ligne pour les aéroports. Mon implication couvrait toute la genèse du projet, incluant la conception de la base de données (SQL Server), le back-end de gestion (ASP.NET MVC2) et le front-end client (ASP.NET WebForms).

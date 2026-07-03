@@ -6,6 +6,7 @@ jobTitle: "Consultant IT"
 company: "Logica"
 location: "Cobham"
 duration: "2000 - 2001"
+summary: "Développement en Borland C++."
 ---
 
 Développement en Borland C++.

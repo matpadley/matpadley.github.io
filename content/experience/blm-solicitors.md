@@ -6,6 +6,7 @@ jobTitle: "Team Lead"
 company: "BLM Solicitors"
 location: "Manchester"
 duration: "April 2017 - Oct 2018"
+summary: "Led a squad enhancing a bespoke case management system built with Web API 2, TypeScript and Angular."
 ---
 
 Enhancing the bespoke case management system was my main role here, written using Web API 2 and TypeScript (with Angular) utilising a SQL Server database. Developed workflows (Part 8, Part 18, Part 20, Offers, Payments, Pre-Litigation and Settlements). Both myself and a colleague introduced a number of improvements to the process to streamline this and reduce the dev-to-test cycle.

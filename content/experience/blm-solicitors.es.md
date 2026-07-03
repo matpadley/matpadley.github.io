@@ -6,6 +6,7 @@ jobTitle: "Team Lead"
 company: "BLM Solicitors"
 location: "Manchester"
 duration: "Abril 2017 - Oct 2018"
+summary: "Liderazgo de un squad para mejorar un sistema de gestión de casos a medida construido con Web API 2, TypeScript y Angular."
 ---
 
 Mi función principal aquí fue mejorar el sistema de gestión de casos a medida, escrito con Web API 2 y TypeScript (con Angular) sobre una base de datos SQL Server. Desarrollar los flujos de trabajo (Part 8, Part 18, Part 20, Ofertas, Pagos, Pre-Litigation y Acuerdos) resultaba bastante engorroso. Junto con un compañero, introdujimos una serie de mejoras en el proceso para agilizarlo y reducir el ciclo de desarrollo a pruebas.

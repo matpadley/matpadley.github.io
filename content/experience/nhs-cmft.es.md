@@ -6,6 +6,7 @@ jobTitle: "Desarrollador de Software Senior"
 company: "NHS (CMFT)"
 location: "Manchester"
 duration: "Sept 2013 - Oct 2014"
+summary: "Desarrollo desde cero de un nuevo sistema de historiales de pacientes para el CMFT con ASP.NET, WCF y SQL Server."
 ---
 
 El CMFT necesitaba un nuevo sistema de historiales de pacientes, y no existía ninguna aplicación de terceros que cumpliera sus requisitos, así que me incorporaron internamente para desarrollarlo con un equipo pequeño. Diseñamos un sistema basado en un front-end ASP.NET 4, un back-end WCF y una base de datos SQL Server. Los elementos de la interfaz se diseñaron con Kendo UI y jQuery, y más adelante introduje AngularJS para gestionar algunas de las pantallas más complejas.

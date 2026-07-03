@@ -6,6 +6,7 @@ jobTitle: "Senior Developer"
 company: "YordCard"
 location: "Sheffield"
 duration: "Jan 2017 - March 2017"
+summary: "Supported existing applications and migrated on-site servers to AWS."
 ---
 
 A simple role revolving around supporting the existing applications. Involved migration of onsite servers onto AWS, plus refactoring of an old codebase and database report writing.

@@ -6,6 +6,7 @@ jobTitle: "Développeur Logiciel"
 company: "Champion Accountants"
 location: "Worsley"
 duration: "2006 - 2008"
+summary: "Développement d'un intranet RH sur mesure avec ASP.NET WebForms et SQL Server."
 ---
 
 Développement d'un intranet sur mesure pour gérer les activités RH et héberger divers documents sensibles du personnel, construit avec ASP.NET WebForms, SQL Server 2005 et .NET 2.

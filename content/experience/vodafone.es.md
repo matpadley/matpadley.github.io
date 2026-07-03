@@ -6,6 +6,7 @@ jobTitle: "Desarrollador de Software Senior"
 company: "Vodafone"
 location: "Manchester"
 duration: "Oct 2014 - Dic 2016"
+summary: "Incorporación de funcionalidades a una aplicación SME basada en Event Sourcing e implantación de pruebas front-end en Angular con Protractor."
 ---
 
 Mi función inicial fue trabajar dentro de un pequeño equipo añadiendo nuevas funcionalidades a una aplicación SME arquitecturada alrededor de BackboneJS, CQRS, Event Sourcing, RabbitMQ, RavenDB y SQL Server. Esta se reestructuró hacia un back-end WebAPI (incluyendo OWIN) y un front-end en Angular. La capa de dominio, inicialmente bastante sencilla, fue creciendo en complejidad.

@@ -6,6 +6,7 @@ jobTitle: "Développeur Logiciel Senior"
 company: "NHS (CMFT)"
 location: "Manchester"
 duration: "Sept 2013 - Oct 2014"
+summary: "Conception d'un nouveau système de dossiers patients pour le CMFT, entièrement construit avec ASP.NET, WCF et SQL Server."
 ---
 
 Le CMFT avait besoin d'un nouveau système de dossiers patients, et aucune application tierce ne répondait à leurs exigences. J'ai donc été recruté en interne pour le développer avec une petite équipe. Nous avons conçu un système basé sur un front-end ASP.NET 4, un back-end WCF et une base de données SQL Server. Les éléments d'interface ont été conçus avec Kendo UI et jQuery, et j'ai ensuite introduit AngularJS pour gérer certains des écrans les plus complexes.

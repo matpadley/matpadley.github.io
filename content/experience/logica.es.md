@@ -6,6 +6,7 @@ jobTitle: "Consultor de TI"
 company: "Logica"
 location: "Cobham"
 duration: "2000 - 2001"
+summary: "Desarrollo utilizando Borland C++."
 ---
 
 Desarrollo utilizando Borland C++.
