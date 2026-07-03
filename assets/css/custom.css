@@ -7,8 +7,24 @@
  * scheme. Map them to the real Bootstrap variables the rest of the site uses.
  */
 :root {
-    --rad-color-box: var(--bs-tertiary-bg);
     --rad-color-primary: var(--bs-primary);
     --rad-color-text-secondary: var(--bs-secondary-color);
     --rad-color-text-muted: var(--bs-tertiary-color);
+}
+
+/* Strip the card-style box (background/border/shadow) off the breadcrumb bar
+ * so it reads as a plain inline trail, consistent with the rest of the site. */
+.breadcrumbs {
+    background: none;
+    padding: 0.75rem 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+html[data-bs-theme="dark"] .breadcrumbs {
+    background: none;
+    border: none;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
 }
