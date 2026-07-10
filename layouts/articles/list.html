@@ -1,0 +1,79 @@
+{{ define "main" }}
+<div class="list flex-grow-1">
+  <section id="main-content" tabindex="-1" class="section list-{{ .Kind }}">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="mb-4">{{ .Title }}</h1>
+
+          {{ $pages := sort .Pages "Date" "desc" }}
+
+          {{/* Build an ordered list of distinct months (newest first), each as {key, label} */}}
+          {{ $months := slice }}
+          {{ range $pages }}
+            {{ $key := .Date.Format "2006-01" }}
+            {{ $exists := false }}
+            {{ range $months }}
+              {{ if eq .key $key }}{{ $exists = true }}{{ end }}
+            {{ end }}
+            {{ if not $exists }}
+              {{ $months = $months | append (dict "key" $key "label" (.Date.Format "January 2006")) }}
+            {{ end }}
+          {{ end }}
+
+          {{ if gt (len $months) 1 }}
+            <ul class="nav nav-pills mb-4 flex-wrap article-month-picker" id="article-month-tabs" role="tablist">
+              {{ range $i, $m := $months }}
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link{{ if eq $i 0 }} active{{ end }}"
+                    id="month-{{ $m.key }}-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#month-{{ $m.key }}"
+                    type="button"
+                    role="tab"
+                    aria-controls="month-{{ $m.key }}"
+                    aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}">
+                    {{ $m.label }}
+                  </button>
+                </li>
+              {{ end }}
+            </ul>
+          {{ end }}
+
+          <div class="tab-content" id="article-month-tab-content">
+            {{ range $i, $m := $months }}
+              <div
+                class="tab-pane fade{{ if eq $i 0 }} show active{{ end }}"
+                id="month-{{ $m.key }}"
+                role="tabpanel"
+                aria-labelledby="month-{{ $m.key }}-tab"
+                tabindex="0">
+                {{ if eq $.Site.Params.blog.listStyle "summary" }}
+                  <div class="posts-list">
+                    {{ range $pages }}
+                      {{ if eq (.Date.Format "2006-01") $m.key }}
+                        <div class="row row--padded rad-animation-group rad-fade-down rad-waiting rad-animate section--border-bottom">
+                          {{ .Render "summary" }}
+                        </div>
+                      {{ end }}
+                    {{ end }}
+                  </div>
+                {{ else }}
+                  <ul class="posts-list-simple">
+                    {{ range $pages }}
+                      {{ if eq (.Date.Format "2006-01") $m.key }}
+                        {{ .Render "li" }}
+                      {{ end }}
+                    {{ end }}
+                  </ul>
+                {{ end }}
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{{ end }}
