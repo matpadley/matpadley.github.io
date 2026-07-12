@@ -161,6 +161,11 @@ name = "Search"
 URL = "/search"
 weight = 5
 
+[[languages.en.menus.header]]
+name = "News"
+URL = "/news"
+weight = 3
+
 [[languages.en.menus.footer]]
 name = "Home"
 URL = "/"
