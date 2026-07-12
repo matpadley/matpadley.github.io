@@ -10,7 +10,11 @@
       "Bash(curl -s http://localhost:1313/es/contact/)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:1313/contact/)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:1313/fr/contact/)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:1313/es/contact/)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:1313/es/contact/)",
+      "Bash(dotnet add *)",
+      "Bash(dotnet build *)",
+      "Bash(find ~/.nuget/packages/microsoft.azure.functions.worker.applicationinsights -iname \"*.dll\" | head -5)",
+      "Read(//Users/mathewpadley/.nuget/packages/microsoft.azure.functions.worker.applicationinsights/**)"
     ]
   }
 }

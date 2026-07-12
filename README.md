@@ -4,8 +4,9 @@ Personal site and CV for Mathew Padley, built with [Hugo](https://gohugo.io) usi
 [adritian-free-hugo-theme](https://github.com/zetxek/adritian-free-hugo-theme). Served at
 [matpadley.github.io](https://matpadley.github.io/) via GitHub Pages.
 
-The repo holds only content, configuration, and a couple of theme overrides — the theme itself is
-pulled in as a git submodule.
+The repo holds content, configuration, and a couple of theme overrides for the site itself — the
+theme is pulled in as a git submodule — plus the Azure Function backend and infrastructure for the
+`/contact` form (see [Contact form backend](#contact-form-backend)).
 
 ## Prerequisites
 
@@ -58,11 +59,13 @@ content/            Site content, organized by Hugo content type
   articles/           Blog-style posts
   footer/             Footer content (contact form)
 layouts/             Small theme overrides (articles list/summary, experience single, a shortcode)
+assets/js/           contact-form.js — client-side honeypot/timing logic for the /contact form
 i18n/                UI string translations (en, fr, es)
 data/                Site data files
-assets/              Site-specific CSS
 hugo.toml            Site config: languages, menus, theme params, module mounts
-themes/               adritian-free-hugo-theme (git submodule, do not edit directly)
+themes/              adritian-free-hugo-theme (git submodule, do not edit directly)
+api/ContactFunction/ Azure Function backend for the /contact form (see below)
+infra/               Bicep templates provisioning that function's Azure resources
 ```
 
 ### Multi-language content
@@ -70,6 +73,27 @@ themes/               adritian-free-hugo-theme (git submodule, do not edit direc
 The site is served in English (default), French, and Spanish. Translated content uses Hugo's
 language-suffix convention, e.g. `cv.md` / `cv.fr.md` / `cv.es.md`. When editing a content file,
 check for and update its `.fr.md` / `.es.md` siblings so translations don't drift.
+
+## Contact form backend
+
+The `/contact` form posts to an Azure Function rather than a third-party form service:
+
+- `api/ContactFunction/` — .NET 10 isolated-worker Azure Function (`ContactFunction.cs`) that
+  validates the submission, applies a honeypot + submission-timing anti-bot check shared with
+  `assets/js/contact-form.js`, and sends the message via Azure Communication Services Email.
+- `infra/main.bicep` / `infra/rbac.bicep` — provisions the Function App (Flex Consumption), storage,
+  Application Insights, and the ACS email domain the function sends through.
+- `.github/workflows/deploy-contact-function.yml` — manual-only (`workflow_dispatch`) deploy that
+  applies the Bicep and publishes the function code. It never runs on a push, since it touches
+  billed Azure resources.
+
+This is separate from the main Hugo build/deploy in `.github/workflows/hugo.yml`. One-time Azure/GitHub
+setup (resource group, OIDC federated identity, GitHub environment secrets) is required before the
+deploy workflow can run — see the local, git-ignored `local_docs/AZURE_SETUP_TODO.md` if present, or
+recreate those steps from `infra/main.bicep`'s parameters and the workflow's required secrets.
+
+To develop the function locally, copy `api/ContactFunction/local.settings.json.example` to
+`local.settings.json` and fill in an ACS connection string.
 
 ## Theme
 

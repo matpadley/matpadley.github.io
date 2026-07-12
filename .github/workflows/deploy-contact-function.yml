@@ -1,0 +1,73 @@
+name: Deploy contact function
+
+# Manual only, by design - this provisions/updates real billed Azure resources and should never
+# fire on a routine push. See AZURE_SETUP_TODO.md for the one-time setup this depends on.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Azure login (OIDC)
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Deploy infrastructure (Bicep)
+        id: infra
+        run: |
+          set -euo pipefail
+          outputs=$(az deployment group create \
+            --resource-group "${{ secrets.AZURE_RESOURCE_GROUP }}" \
+            --template-file infra/main.bicep \
+            --parameters contactRecipientEmail="${{ secrets.CONTACT_RECIPIENT_EMAIL }}" \
+            --query properties.outputs -o json)
+          echo "functionAppName=$(echo "$outputs" | jq -r '.functionAppName.value')" >> "$GITHUB_OUTPUT"
+          echo "functionAppUrl=$(echo "$outputs" | jq -r '.functionAppUrl.value')" >> "$GITHUB_OUTPUT"
+
+      - name: Publish function code
+        run: dotnet publish api/ContactFunction/ContactFunction.csproj -c Release -o publish_output
+
+      - name: Zip package
+        run: |
+          cd publish_output
+          zip -r ../function.zip . -x '*.pdb'
+
+      - name: Deploy function code
+        run: |
+          az functionapp deploy \
+            --resource-group "${{ secrets.AZURE_RESOURCE_GROUP }}" \
+            --name "${{ steps.infra.outputs.functionAppName }}" \
+            --src-path function.zip \
+            --type zip
+
+      - name: Summary
+        run: |
+          {
+            echo "### Contact function deployed"
+            echo ""
+            echo "Function app: \`${{ steps.infra.outputs.functionAppName }}\`"
+            echo ""
+            echo "Endpoint (paste into \`hugo.toml\`'s \`params.contact.endpoint\`):"
+            echo ""
+            echo "\`\`\`"
+            echo "${{ steps.infra.outputs.functionAppUrl }}"
+            echo "\`\`\`"
+          } >> "$GITHUB_STEP_SUMMARY"

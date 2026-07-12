@@ -4,3 +4,4 @@ resources/
 .hugo_build.lock
 .DS_Store
 .github_push_token
+local_docs/

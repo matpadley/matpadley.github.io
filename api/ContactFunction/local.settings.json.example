@@ -1,0 +1,12 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+
+    "AcsConnectionString": "endpoint=https://<your-acs-resource>.communication.azure.com/;accesskey=<key>",
+    "EmailSender": "DoNotReply@<your-managed-domain>.azurecomm.net",
+    "ContactRecipientEmail": "you@example.com",
+    "AllowedOrigins": "https://matpadley.github.io"
+  }
+}
