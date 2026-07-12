@@ -8,7 +8,7 @@ draft = false
     title="Mathew Padley"
     subtitle="Software Engineer"
     button_text="Email me"
-    button_url="#contact"
+    button_url="/contact"
     button_icon="icon-email"
     description="Over 20 years in IT across Space and Defence, Travel, Telecoms and Law. See the full <a href='/cv'>CV</a> or browse the <a href='/articles'>Articles</a> section."
 >}}

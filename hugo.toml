@@ -112,6 +112,11 @@ showJobCard = true
 [params.navbarOverflow]
 mode = "dropdown"
 
+# Endpoint the /contact form (layouts/shortcodes/contact-form.html) POSTs to.
+# Set this to the deployed Azure Function URL; the form fails gracefully while empty.
+[params.contact]
+endpoint = ""
+
 [params.colorTheme]
 [params.colorTheme.selector.disable]
 footer = false
@@ -151,8 +156,8 @@ weight = 3
 
 [[languages.en.menus.header]]
 pre = "email"
-name = "email"
-URL = "/#contact"
+name = "Contact"
+URL = "/contact"
 weight = 4
 
 [[languages.en.menus.header]]
@@ -183,7 +188,7 @@ weight = 3
 
 [[languages.en.menus.footer]]
 name = "Contact"
-URL = "/#contact"
+URL = "/contact"
 weight = 4
 
 
@@ -214,8 +219,8 @@ weight = 3
 
 [[languages.fr.menus.header]]
 pre = "email"
-name = "courriel"
-URL = "/fr/#contact"
+name = "Contact"
+URL = "/fr/contact"
 weight = 4
 
 [[languages.fr.menus.header]]
@@ -241,7 +246,7 @@ weight = 3
 
 [[languages.fr.menus.footer]]
 name = "Contact"
-URL = "/fr/#contact"
+URL = "/fr/contact"
 weight = 4
 
 
@@ -272,8 +277,8 @@ weight = 3
 
 [[languages.es.menus.header]]
 pre = "email"
-name = "correo"
-URL = "/es/#contact"
+name = "Contacto"
+URL = "/es/contact"
 weight = 4
 
 [[languages.es.menus.header]]
@@ -299,7 +304,7 @@ weight = 3
 
 [[languages.es.menus.footer]]
 name = "Contacto"
-URL = "/es/#contact"
+URL = "/es/contact"
 weight = 4
 
 

@@ -1,0 +1,66 @@
+{{/*
+  contact-form.html shortcode
+
+  Params: name_placeholder, email_placeholder, message_placeholder, button_text,
+  sending_text, success_text, error_text, message_rows (default 5).
+
+  Submits via assets/js/contact-form.js to .Site.Params.contact.endpoint. Includes a
+  honeypot field ("company") and a render-timestamp field ("renderedAt") that are sent
+  to that endpoint on every submission — the receiving function is responsible for
+  rejecting the submission when the honeypot is filled in or the timestamp shows the
+  form was submitted too quickly to be a human. See assets/js/contact-form.js for the
+  full request/response contract.
+*/}}
+
+{{ $endpoint := .Site.Params.contact.endpoint | default "" }}
+{{ $name_placeholder := .Get "name_placeholder" }}
+{{ $email_placeholder := .Get "email_placeholder" }}
+{{ $message_placeholder := .Get "message_placeholder" }}
+{{ $button_text := .Get "button_text" | default "Send" }}
+{{ $sending_text := .Get "sending_text" | default $button_text }}
+{{ $success_text := .Get "success_text" | default "Thanks — your message has been sent." }}
+{{ $error_text := .Get "error_text" | default "Something went wrong. Please try again shortly." }}
+{{ $message_rows := .Get "message_rows" | default "5" }}
+
+<div class="contact-form-wrap">
+  <form class="contact-form" id="contact-form" data-endpoint="{{ $endpoint }}" novalidate>
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <input type="text" name="name" id="contact-name" class="form-control" placeholder="{{ $name_placeholder }}" autocomplete="name" required>
+      </div>
+      <div class="col-12 col-sm-6">
+        <input type="email" name="email" id="contact-email" class="form-control" placeholder="{{ $email_placeholder }}" autocomplete="email" required>
+      </div>
+    </div>
+    <div class="row pt-4">
+      <div class="col-12">
+        <textarea name="message" id="contact-message" class="form-control" rows="{{ $message_rows }}" placeholder="{{ $message_placeholder }}" required></textarea>
+      </div>
+    </div>
+
+    {{/* Honeypot: invisible to sighted users and screen readers alike, but present in
+         the raw HTML for bots that fill in every field without rendering CSS. */}}
+    <div class="hp-field" aria-hidden="true">
+      <label for="contact-company">Company</label>
+      <input type="text" name="company" id="contact-company" tabindex="-1" autocomplete="off">
+    </div>
+    <input type="hidden" name="renderedAt" id="contact-rendered-at" value="">
+
+    <div class="row pt-4">
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary" id="contact-submit">{{ $button_text }}</button>
+      </div>
+    </div>
+
+    <div class="pt-3" role="status" aria-live="polite" id="contact-status"></div>
+  </form>
+</div>
+
+{{ $js := resources.Get "js/contact-form.js" }}
+{{ if hugo.IsProduction }}
+  {{ $js = $js | resources.Minify | resources.Fingerprint }}
+{{ end }}
+<script defer src="{{ $js.RelPermalink }}"
+  data-sending-text="{{ $sending_text }}"
+  data-success-text="{{ $success_text }}"
+  data-error-text="{{ $error_text }}"></script>

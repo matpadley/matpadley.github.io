@@ -8,7 +8,7 @@ draft = false
     title="Mathew Padley"
     subtitle="Ingeniero de software"
     button_text="Escríbeme"
-    button_url="#contact"
+    button_url="/es/contact"
     button_icon="icon-email"
     description="Más de 20 años en el sector IT en Espacio y Defensa, Viajes, Telecomunicaciones y Derecho. Consulta mi <a href='/es/cv'>CV</a> completo o explora la sección de <a href='/articles'>Artículos</a> (en inglés)."
 >}}

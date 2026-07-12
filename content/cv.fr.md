@@ -5,7 +5,7 @@ hideTitle: true
 
 ### Mathew R. Padley
 
-[mrpadley@icloud.com](mailto:mrpadley@icloud.com)
+[Me contacter](/fr/contact)
 
 ### À propos de moi
 

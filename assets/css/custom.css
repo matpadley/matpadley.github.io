@@ -32,3 +32,12 @@ html[data-bs-theme="dark"] #breadcrumb-bar .breadcrumbs {
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
 }
+
+/* Honeypot field for the contact form (layouts/shortcodes/contact-form.html). Moved
+ * off-screen rather than display:none/visibility:hidden, since some bots skip fields
+ * hidden that way but still fill in anything positioned off the visible canvas. */
+.hp-field {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+}
