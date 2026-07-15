@@ -14,7 +14,9 @@
       "Bash(dotnet add *)",
       "Bash(dotnet build *)",
       "Bash(find ~/.nuget/packages/microsoft.azure.functions.worker.applicationinsights -iname \"*.dll\" | head -5)",
-      "Read(//Users/mathewpadley/.nuget/packages/microsoft.azure.functions.worker.applicationinsights/**)"
+      "Read(//Users/mathewpadley/.nuget/packages/microsoft.azure.functions.worker.applicationinsights/**)",
+      "Bash(gh issue *)",
+      "Bash(gh label *)"
     ]
   }
 }
