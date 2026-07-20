@@ -55,11 +55,25 @@ jobs:
         # /api/publish?type=zip, which Flex Consumption's Kudu rejects with 415. config-zip has a
         # dedicated Flex Consumption code path (application/zip content type) and is what Microsoft's
         # own docs recommend for this plan - see https://learn.microsoft.com/azure/azure-functions/flex-consumption-how-to
+        #
+        # config-zip's own post-upload health check (fetching the host master key over ARM) can
+        # transiently fail right after the RBAC role assignments in rbac.bicep are created in the
+        # same run - propagation can lag a minute or so, and the CLI's fixed 60s wait isn't always
+        # enough. The zip upload + sync-triggers themselves (logged before the health check) still
+        # succeed, so retry the command rather than failing the whole deploy on that trailing check.
         run: |
-          az functionapp deployment source config-zip \
-            --resource-group "${{ secrets.AZURE_RESOURCE_GROUP }}" \
-            --name "${{ steps.infra.outputs.functionAppName }}" \
-            --src function.zip
+          for attempt in 1 2 3; do
+            if az functionapp deployment source config-zip \
+              --resource-group "${{ secrets.AZURE_RESOURCE_GROUP }}" \
+              --name "${{ steps.infra.outputs.functionAppName }}" \
+              --src function.zip; then
+              exit 0
+            fi
+            echo "Deploy attempt $attempt failed, retrying in 60s..." >&2
+            sleep 60
+          done
+          echo "Deploy failed after 3 attempts" >&2
+          exit 1
 
       - name: Summary
         run: |
