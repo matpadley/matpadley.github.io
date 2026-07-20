@@ -1,9 +1,11 @@
 ---
 title: "OpenAI sacó un teclado de 230 $ para tu agente de IA. A internet no le ha convencido."
 date: 2026-07-20
-draft: true
+draft: false
 description: "El primer producto de hardware de OpenAI, un teclado de 230 $ para agentes de Codex, está recibiendo críticas de los desarrolladores."
-tags: ["AI coding", "OpenAI", "Codex"]
+tags:
+  - openai-codex
+  - ai-coding-tools
 ---
 
 OpenAI acaba de lanzar su primer hardware — el Codex Micro, un pequeño teclado luminoso con "Agent Keys" y una rueda de "reasoning", diseñado junto a Work Louder. Los desarrolladores en Slashdot no tardaron en señalar que su teclado de 18 dólares ya hace lo mismo, y alguien bromeó imaginando subir la rueda mientras un agente está borrando una base de datos a medio proceso. A veces la mejor petición de función es "mejor no".

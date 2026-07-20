@@ -1,9 +1,11 @@
 ---
 title: "OpenAI made a $230 keyboard for your AI agent. The internet is not into it."
 date: 2026-07-20
-draft: true
+draft: false
 description: "OpenAI's first hardware product, a $230 keyboard for Codex agents, is getting roasted by developers online."
-tags: ["AI coding", "OpenAI", "Codex"]
+tags:
+  - openai-codex
+  - ai-coding-tools
 ---
 
 OpenAI just launched its first hardware — the Codex Micro, a tiny light-up keyboard with "Agent Keys" and a reasoning dial, made with Work Louder. Coders on Slashdot immediately pointed out their $18 keyboard already does the job, and one joked about turning the reasoning dial up while watching an agent mid-database-deletion. Sometimes the best feature request is "please don't."

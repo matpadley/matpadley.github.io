@@ -1,9 +1,13 @@
 ---
 title: "Codex vient de passer les 8 millions d'utilisateurs en une semaine — et Anthropic a réagi en premier"
 date: 2026-07-20
-draft: true
+draft: false
 description: "La croissance des utilisateurs de Codex a explosé après le lancement de GPT-5.6, et Anthropic a réagi vite en prolongeant les limites de Claude Code."
-tags: ["AI coding", "OpenAI", "Codex", "Claude Code", "Anthropic"]
+tags:
+  - openai-codex
+  - claude-code
+  - anthropic
+  - ai-coding-tools
 ---
 
 GPT-5.6 est sorti le 9 juillet et les chiffres de Codex se sont envolés : 6 millions le 12, 7 millions le lendemain, 8 millions dès le week-end. Quelques heures après avoir franchi les 7 millions, Anthropic a prolongé jusqu'au 19 juillet le bonus de 50 % sur les limites hebdomadaires de Claude Code. Rien ne dit mieux "on surveille la concurrence" qu'ajuster ses quotas en réponse à la poussée de croissance d'un rival.
