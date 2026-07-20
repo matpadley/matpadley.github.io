@@ -1,8 +1,8 @@
 ---
-title: "Articles"
+title: "News"
 date: 2026-06-30
 draft: false
-description: "Articles and notes from Mathew Padley"
+description: "News about AI from around the world."
 ---
 
-Welcome to the articles section.
+Welcome to the news section.
