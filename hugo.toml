@@ -3,6 +3,10 @@ title = "Mathew Padley"
 languageCode = "en-us"
 theme = "adritian-free-hugo-theme"
 
+# Keep URL casing as authored, so content/ClubMonitor/ serves from /ClubMonitor/ rather than
+# being folded to /clubmonitor/. Every other content file is already lowercase, so nothing else moves.
+disablePathToLower = true
+
 [pagination]
 pagerSize = 6
 
@@ -160,16 +164,21 @@ URL = "/news"
 weight = 4
 
 [[languages.en.menus.header]]
+name = "ClubMonitor"
+URL = "/ClubMonitor"
+weight = 5
+
+[[languages.en.menus.header]]
 pre = "email"
 name = "Contact"
 URL = "/contact"
-weight = 5
+weight = 6
 
 [[languages.en.menus.header]]
 pre = "search"
 name = "Search"
 URL = "/search"
-weight = 6
+weight = 7
 
 [[languages.en.menus.footer]]
 name = "Home"
@@ -223,16 +232,21 @@ URL = "/news"
 weight = 4
 
 [[languages.fr.menus.header]]
+name = "ClubMonitor"
+URL = "/ClubMonitor"
+weight = 5
+
+[[languages.fr.menus.header]]
 pre = "email"
 name = "Contact"
 URL = "/fr/contact"
-weight = 5
+weight = 6
 
 [[languages.fr.menus.header]]
 pre = "search"
 name = "Recherche"
 URL = "/search"
-weight = 6
+weight = 7
 
 [[languages.fr.menus.footer]]
 name = "Accueil"
@@ -286,16 +300,21 @@ URL = "/news"
 weight = 4
 
 [[languages.es.menus.header]]
+name = "ClubMonitor"
+URL = "/ClubMonitor"
+weight = 5
+
+[[languages.es.menus.header]]
 pre = "email"
 name = "Contacto"
 URL = "/es/contact"
-weight = 5
+weight = 6
 
 [[languages.es.menus.header]]
 pre = "search"
 name = "Buscar"
 URL = "/search"
-weight = 6
+weight = 7
 
 [[languages.es.menus.footer]]
 name = "Inicio"
