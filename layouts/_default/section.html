@@ -1,0 +1,46 @@
+{{/*
+  Override of the theme's `_default/section.html` (used by /news, /articles, /ClubMonitor,
+  /education). Identical to the theme's version except that it renders pagination
+  navigation — the theme paginates the section's pages but emits no links, so any
+  section with more than `pagination.pagerSize` posts silently loses everything
+  past the first page.
+*/}}
+{{ define "main" }}
+<div id="main-content" tabindex="-1" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>{{ .Title }}</h1>
+        {{ if .Params.description }}
+          <p class="lead">{{ .Params.description }}</p>
+        {{ end }}
+
+        <div class="content">
+          {{ .Content }}
+        </div>
+
+        {{ if .Pages }}
+          {{ $paginator := .Paginate (.Pages.ByDate.Reverse) }}
+          <div class="section-posts mt-5">
+            <div class="posts-list">
+              {{ range $paginator.Pages }}
+                <article class="post mb-4">
+                  <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                  {{ if .Summary }}
+                    <div>{{ .Summary | safeHTML }}</div>
+                  {{ end }}
+                  <div class="post-meta">
+                    <small class="text-muted">{{ .Date.Format "January 2, 2006" }}</small>
+                  </div>
+                </article>
+              {{ end }}
+            </div>
+
+            {{ partial "section-pagination.html" $paginator }}
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

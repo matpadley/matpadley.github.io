@@ -1,0 +1,68 @@
+{{/*
+  Bootstrap pagination nav for a paginator.
+
+  The theme's `_default/section.html` paginates but never renders navigation, so
+  sections with more than `pagination.pagerSize` posts (news, ClubMonitor) silently
+  drop everything past page 1. This partial supplies the missing nav, and reuses the
+  same markup/classes as the theme's term-page pagination so it picks up the theme CSS.
+
+  Named `section-pagination` rather than `pagination`: a site-level `partials/pagination.html`
+  shadows Hugo's embedded one, which breaks the theme's `blog/list-cards.html`
+  (`{{ template "_internal/pagination.html" . }}`).
+
+  Context: a paginator (the result of `.Paginate`). Renders nothing for a single page.
+
+      {{ partial "section-pagination.html" $paginator }}
+*/}}
+{{ $paginator := . }}
+{{ if gt $paginator.TotalPages 1 }}
+  <nav aria-label="{{ i18n "pagination_label" | default "Page navigation" }}" class="mt-5 d-print-none">
+    <ul class="pagination justify-content-center">
+      {{ if $paginator.HasPrev }}
+        <li class="page-item">
+          <a class="page-link" href="{{ $paginator.Prev.URL }}" aria-label="{{ i18n "pagination_previous" | default "Previous" }}">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+      {{ end }}
+
+      {{/* Always show first/last page; show a window of pages around the current one,
+           collapsing whatever falls outside that window into a single ellipsis per side. */}}
+      {{ $window := 2 }}
+      {{ $current := $paginator.PageNumber }}
+      {{ $total := $paginator.TotalPages }}
+      {{ $scratch := newScratch }}
+      {{ $scratch.Set "leftDots" false }}
+      {{ $scratch.Set "rightDots" false }}
+
+      {{ range $paginator.Pagers }}
+        {{ $n := .PageNumber }}
+        {{ $inWindow := and (ge $n (sub $current $window)) (le $n (add $current $window)) }}
+
+        {{ if or (eq $n 1) (eq $n $total) $inWindow }}
+          <li class="page-item {{ if eq $n $current }}active{{ end }}">
+            <a class="page-link" href="{{ .URL }}" {{ if eq $n $current }}aria-current="page"{{ end }}>{{ $n }}</a>
+          </li>
+        {{ else if and (eq $n 2) (gt (sub $current $window) 2) (not ($scratch.Get "leftDots")) }}
+          <li class="page-item disabled" aria-hidden="true">
+            <span class="page-link">&hellip;</span>
+          </li>
+          {{ $scratch.Set "leftDots" true }}
+        {{ else if and (eq $n (sub $total 1)) (lt (add $current $window) (sub $total 1)) (not ($scratch.Get "rightDots")) }}
+          <li class="page-item disabled" aria-hidden="true">
+            <span class="page-link">&hellip;</span>
+          </li>
+          {{ $scratch.Set "rightDots" true }}
+        {{ end }}
+      {{ end }}
+
+      {{ if $paginator.HasNext }}
+        <li class="page-item">
+          <a class="page-link" href="{{ $paginator.Next.URL }}" aria-label="{{ i18n "pagination_next" | default "Next" }}">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+{{ end }}

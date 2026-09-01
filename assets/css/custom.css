@@ -41,3 +41,16 @@ html[data-bs-theme="dark"] #breadcrumb-bar .breadcrumbs {
     left: -9999px;
     top: -9999px;
 }
+
+/* The theme's `.section li::before` (assets/scss/_raditian.scss) paints a bullet dot on
+ * every `li` inside a `.section` wrapper, and only cancels it for pagination under
+ * `.blog` and `.term-page`. The section listings (/news, /ClubMonitor — see
+ * layouts/_default/section.html) sit in a plain `.section`, so their pagination page
+ * numbers picked up bullets. Cancel it for any pagination nav.
+ *
+ * Two classes beat the theme's one-class `.section li::before` on specificity, so this
+ * wins without !important despite default-adritian.min.css being linked after this file. */
+.pagination .page-item::before {
+    content: none;
+    display: none;
+}

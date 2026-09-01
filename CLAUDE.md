@@ -76,6 +76,17 @@ the one place in this repo where template logic (not just content/config) lives:
   `content/articles/` only (`content/news/` is unaffected). Groups posts into Bootstrap pill tabs by
   month, rendering each `content/articles/` page as either a `summary` partial (full teaser card, used
   when `params.blog.listStyle = "summary"` in `hugo.toml`) or an `li` partial (title + date only).
+  (These currently sit in `layouts/articles_OLD/`, so they are inactive — `/articles` falls through to
+  `layouts/_default/section.html` like the other sections.)
+- `layouts/_default/section.html` — override of the theme's section template, used by every section
+  without a more specific layout (`/news`, `/articles`, `/ClubMonitor`, `/education`). Identical to
+  the theme's version apart from rendering pagination navigation: the theme calls `.Paginate` but
+  emits no links, so any section with more than `pagination.pagerSize` (6) posts silently dropped
+  everything past page 1.
+- `layouts/partials/section-pagination.html` — the Bootstrap pagination nav that override renders.
+  Reuses the markup/classes of the theme's term-page pagination so it inherits the theme CSS. It must
+  *not* be named `partials/pagination.html`: that name shadows Hugo's embedded pagination partial and
+  breaks the theme's `blog/list-cards.html`, which calls `_internal/pagination.html`.
 
 ## Configuration
 
