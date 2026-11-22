@@ -6,8 +6,6 @@ tags:
   - Troubleshooting
 ---
 
-## The symptom
-
 After moving from the macOS 27 beta to the release build (27.0.1), three of Apple's own apps stopped working for me. Messages bounced in the Dock forever and showed up as “Not Responding” in Force Quit. Maps and Contacts wouldn't start at all. Clicking Messages in System Settings crashed System Settings outright, and trying to sign out of iCloud left the dialog spinning on “Signing out” indefinitely.
 
 Everything had been fine on the beta, right up until I installed the proper release. Once I did manage to sign out of iCloud and back in again, it made no difference.

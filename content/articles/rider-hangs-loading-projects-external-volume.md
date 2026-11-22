@@ -6,8 +6,6 @@ tags: ["jetbrains-rider", "macos", "dotnet", "troubleshooting"]
 summary: "Rider 2026.2 hung on 'Loading projects' for every solution on my Mac. The real cause wasn't a corrupted cache or a bad plugin — it was macOS silently revoking Rider's access to an external volume after an update."
 ---
 
-## The symptom
-
 Every solution I opened in JetBrains Rider 2026.2 on macOS got stuck on "Loading projects." Not one flaky project — *every* project, every time. New solution, old solution, didn't matter. The window would open, the loading spinner would sit there indefinitely, and nothing in the UI gave any clue why.
 
 The usual playbook for this — invalidate caches, delete `~/Library/Caches/JetBrains/Rider2026.2`, restart in Safe Mode to rule out plugins, kill any orphaned `dotnet`/`MSBuild` processes — didn't fix it. Interestingly, VSCode had no trouble building the exact same projects, which turned out to be the clue that mattered most.

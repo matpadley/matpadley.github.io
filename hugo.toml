@@ -164,9 +164,22 @@ URL = "/news"
 weight = 4
 
 [[languages.en.menus.header]]
+identifier = "projects"
+name = "Projects"
+URL = "#"
+weight = 5
+
+[[languages.en.menus.header]]
+parent = "projects"
 name = "ClubMonitor"
 URL = "/ClubMonitor"
-weight = 5
+weight = 1
+
+[[languages.en.menus.header]]
+parent = "projects"
+name = "Darts Scorer"
+URL = "/darts-scorer"
+weight = 2
 
 [[languages.en.menus.header]]
 pre = "email"
@@ -232,9 +245,22 @@ URL = "/news"
 weight = 4
 
 [[languages.fr.menus.header]]
+identifier = "projects"
+name = "Projets"
+URL = "#"
+weight = 5
+
+[[languages.fr.menus.header]]
+parent = "projects"
 name = "ClubMonitor"
 URL = "/ClubMonitor"
-weight = 5
+weight = 1
+
+[[languages.fr.menus.header]]
+parent = "projects"
+name = "Darts Scorer"
+URL = "/darts-scorer"
+weight = 2
 
 [[languages.fr.menus.header]]
 pre = "email"
@@ -300,9 +326,22 @@ URL = "/news"
 weight = 4
 
 [[languages.es.menus.header]]
+identifier = "projects"
+name = "Proyectos"
+URL = "#"
+weight = 5
+
+[[languages.es.menus.header]]
+parent = "projects"
 name = "ClubMonitor"
 URL = "/ClubMonitor"
-weight = 5
+weight = 1
+
+[[languages.es.menus.header]]
+parent = "projects"
+name = "Darts Scorer"
+URL = "/darts-scorer"
+weight = 2
 
 [[languages.es.menus.header]]
 pre = "email"
